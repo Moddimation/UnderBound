@@ -3143,6 +3143,11 @@
     <script>scripts\caster_pause.gml</script>
     <script>scripts\caster_is_playing.gml</script>
     <script>scripts\caster_stop.gml</script>
+    <script>scripts\scr_afterimage.gml</script>
+    <script>scripts\scr_waver_height.gml</script>
+    <script>scripts\scr_waver_height_bg.gml</script>
+    <script>scripts\scr_waver_lava.gml</script>
+    <script>scripts\scr_fx_waver.gml</script>
     <script>scripts\scr_colorcycle.gml</script>
     <script>scripts\draw_me.gml</script>
     <script>scripts\scr_newvapordata.gml</script>
@@ -3182,6 +3187,9 @@
     <script>scripts\scr_storageshift.gml</script>
     <script>scripts\scr_itemshift.gml</script>
     <script>scripts\scr_phoneshift.gml</script>
+    <script>scripts\scr_phone_moveup.gml</script>
+    <script>scripts\scr_itemrewrite.gml</script>
+    <script>scripts\scr_phonename.gml</script>
     <script>scripts\scr_storagename.gml</script>
     <script>scripts\scr_itemdesc.gml</script>
     <script>scripts\scr_itemuseb.gml</script>
@@ -3226,79 +3234,64 @@
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_turnb.gml</script>
     <script>scripts\scr_bouncer.gml</script>
+    <script>scripts\scr_insideborder.gml</script>
     <script>scripts\c_borderheight.gml</script>
     <script>scripts\c_borderwidth.gml</script>
-    <script>scripts\scr_afterimage.gml</script>
-    <script>scripts\scr_alface.gml</script>
-    <script>scripts\scr_asgface.gml</script>
-    <script>scripts\scr_attack.gml</script>
-    <script>scripts\scr_attackcalc.gml</script>
-    <script>scripts\scr_battlegroup.gml</script>
-    <script>scripts\scr_binfowrite.gml</script>
-    <script>scripts\scr_blcon.gml</script>
-    <script>scripts\scr_blconmatch.gml</script>
-    <script>scripts\scr_blcon_x.gml</script>
     <script>scripts\scr_blueat.gml</script>
-    <script>scripts\SCR_BORDER.gml</script>
     <script>scripts\scr_bordercross.gml</script>
-    <script>scripts\SCR_BORDERSETUP.gml</script>
+    <script>scripts\scr_perpendicular.gml</script>
+    <script>scripts\scr_edge.gml</script>
+    <script>scripts\scr_rotategen.gml</script>
+    <script>scripts\SCR_DIRECT.gml</script>
+    <script>scripts\SCR_BORDER.gml</script>
     <script>scripts\SCR_BORDER_X.gml</script>
     <script>scripts\SCR_BORDER_X_X.gml</script>
-    <script>scripts\scr_bwall.gml</script>
-    <script>scripts\scr_damagestandard.gml</script>
-    <script>scripts\scr_damagestandard_x.gml</script>
-    <script>scripts\SCR_DIRECT.gml</script>
-    <script>scripts\scr_edge.gml</script>
-    <script>scripts\scr_facechoice.gml</script>
-    <script>scripts\scr_floweybodyload.gml</script>
-    <script>scripts\scr_floweybodysave.gml</script>
-    <script>scripts\scr_fx_waver.gml</script>
-    <script>scripts\scr_fx_waver_scanline.gml</script>
-    <script>scripts\scr_gameoverb.gml</script>
-    <script>scripts\scr_hplat.gml</script>
-    <script>scripts\scr_insideborder.gml</script>
-    <script>scripts\scr_itemrewrite.gml</script>
     <script>scripts\SCR_LASER.gml</script>
-    <script>scripts\scr_levelup.gml</script>
-    <script>scripts\scr_mercystandard.gml</script>
-    <script>scripts\scr_monsterdefeat.gml</script>
-    <script>scripts\scr_monstersetup.gml</script>
-    <script>scripts\scr_monstersum.gml</script>
-    <script>scripts\scr_msgup.gml</script>
-    <script>scripts\SCR_NEWLINE.gml</script>
-    <script>scripts\scr_noface.gml</script>
-    <script>scripts\scr_papcall.gml</script>
-    <script>scripts\scr_papface.gml</script>
-    <script>scripts\scr_perpendicular.gml</script>
-    <script>scripts\scr_phonename.gml</script>
-    <script>scripts\scr_phone_moveup.gml</script>
-    <script>scripts\scr_recover.gml</script>
-    <script>scripts\scr_regulartext.gml</script>
-    <script>scripts\scr_roomname.gml</script>
-    <script>scripts\scr_rotategen.gml</script>
-    <script>scripts\scr_runaway.gml</script>
-    <script>scripts\scr_sansface.gml</script>
-    <script>scripts\scr_save.gml</script>
-    <script>scripts\scr_saveprocess.gml</script>
-    <script>scripts\scr_sbo.gml</script>
+    <script>scripts\SCR_THATCH.gml</script>
     <script>scripts\scr_sp.gml</script>
     <script>scripts\scr_sr.gml</script>
-    <script>scripts\scr_tempload.gml</script>
-    <script>scripts\scr_tempsave.gml</script>
-    <script>scripts\SCR_TEXTSETUP.gml</script>
-    <script>scripts\scr_textskip.gml</script>
-    <script>scripts\SCR_TEXTTYPE.gml</script>
-    <script>scripts\SCR_TEXTTYPE_f.gml</script>
-    <script>scripts\SCR_THATCH.gml</script>
+    <script>scripts\scr_papcall.gml</script>
     <script>scripts\scr_torcall.gml</script>
+    <script>scripts\scr_textskip.gml</script>
+    <script>scripts\scr_blcon.gml</script>
+    <script>scripts\scr_blcon_x.gml</script>
+    <script>scripts\scr_sansface.gml</script>
     <script>scripts\scr_torface.gml</script>
-    <script>scripts\scr_true_lavawaver.gml</script>
+    <script>scripts\scr_asgface.gml</script>
+    <script>scripts\scr_noface.gml</script>
+    <script>scripts\scr_papface.gml</script>
     <script>scripts\scr_undface.gml</script>
-    <script>scripts\scr_waver_height.gml</script>
-    <script>scripts\scr_waver_height_bg.gml</script>
-    <script>scripts\scr_waver_lava.gml</script>
-    <script>scripts\scr_withallmonster.gml</script>
+    <script>scripts\scr_alface.gml</script>
+    <script>scripts\scr_facechoice.gml</script>
+    <script>scripts\scr_msgup.gml</script>
     <script>scripts\scr_writetext.gml</script>
+    <script>scripts\scr_regulartext.gml</script>
+    <script>scripts\SCR_NEWLINE.gml</script>
+    <script>scripts\SCR_TEXTSETUP.gml</script>
+    <script>scripts\SCR_TEXTTYPE.gml</script>
+    <script>scripts\scr_hplat.gml</script>
+    <script>scripts\scr_bwall.gml</script>
+    <script>scripts\scr_sbo.gml</script>
+    <script>scripts\scr_withallmonster.gml</script>
+    <script>scripts\scr_monstersum.gml</script>
+    <script>scripts\scr_blconmatch.gml</script>
+    <script>scripts\scr_binfowrite.gml</script>
+    <script>scripts\scr_gameoverb.gml</script>
+    <script>scripts\scr_monstersetup.gml</script>
+    <script>scripts\scr_battlegroup.gml</script>
+    <script>scripts\scr_attack.gml</script>
+    <script>scripts\scr_attackcalc.gml</script>
+    <script>scripts\scr_mercystandard.gml</script>
+    <script>scripts\scr_damagestandard.gml</script>
+    <script>scripts\scr_damagestandard_x.gml</script>
+    <script>scripts\scr_runaway.gml</script>
+    <script>scripts\scr_monsterdefeat.gml</script>
+    <script>scripts\SCR_BORDERSETUP.gml</script>
+    <script>scripts\scr_true_lavawaver.gml</script>
+    <script>scripts\scr_fx_waver_scanline.gml</script>
+    <script>scripts\SCR_TEXTTYPE_f.gml</script>
+    <script>scripts\scr_floweybodysave.gml</script>
+    <script>scripts\scr_floweybodyload.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_comicsans</font>
