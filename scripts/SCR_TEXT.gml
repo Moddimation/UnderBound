@@ -5589,7 +5589,5 @@ switch(argument0) {
             i++;
         }
         file_text_close(fileid);*/
-        global.msg[0]= "* UNDERTALE Compilation by Moddimation";
-        global.msg[1]= "%%%";
         break;
 }

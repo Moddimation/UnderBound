@@ -30,7 +30,7 @@ side= 0;
 global.facechange= 1;
 xx= view_xview[view_current];
 yy= view_yview[view_current];
-if(instance_exists(1570/* obj_mainchara */)) {
+if(instance_exists(obj_mainchara)) {
     if(obj_mainchara.y &gt; yy + 130) {
         side= 0;
         if(global.facechoice != 0) {

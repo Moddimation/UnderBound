@@ -30,6 +30,7 @@ writingy= 0;
 SCR_TEXTTYPE(global.typer);
 x= round(x);
 y= round(y);
+show_debug_message("Text Boot 0")
 doak= 0;
 stringno= 0;
 stringpos= 1;
@@ -40,6 +41,7 @@ writingy= round(writingy);
 myx= writingx;
 myy= writingy;
 script_execute(SCR_TEXT, global.msc);
+show_debug_message(global.msc)
 n= 0;
 while(global.msg[n] != "%%%") {
     mystring[n]= global.msg[n];
@@ -48,6 +50,7 @@ while(global.msg[n] != "%%%") {
 originalstring= mystring[0];
 dfy= 0;
 alarm[0]= textspeed;
+show_debug_message("Text Boot 0")
 </string>
           </argument>
         </arguments>
@@ -200,6 +203,8 @@ alarm[0]= textspeed;
     if(string_char_at(originalstring, stringpos) == "\" + chr(ord('"'))+ " + ")
         stringpos+= 2;
 }
+
+show_debug_message("Text Alarm 0 end")
 </string>
           </argument>
         </arguments>
@@ -255,6 +260,8 @@ if(halt == 3 || dfy == 1) instance_destroy();
           <argument>
             <kind>1</kind>
             <string>if(keyboard_multicheck_pressed(0/* NOKEY */) == 1) event_user(0);
+
+show_debug_message("Text Message:\n"+originalstring)
 </string>
           </argument>
         </arguments>
@@ -319,11 +326,12 @@ if(halt == 4) {
             <kind>1</kind>
             <string>myx= writingx;
 myy= writingy;
+show_debug_message("Text Draw")
 n= 1;
 while(n &lt; stringpos + 1) {
     nskip= 0;
     if(string_char_at(originalstring, n) == "&amp;") {
-        script_execute(148/* SCR_NEWLINE */);
+        script_execute(SCR_NEWLINE);
         n++;
     }
     if(string_char_at(originalstring, n) == "^") {
@@ -352,8 +360,8 @@ while(n &lt; stringpos + 1) {
         if(string_char_at(originalstring, n + 1) == "p")
             mycolor= 13941759;
         if(string_char_at(originalstring, n + 1) == "C" &amp;&amp; global.inbattle == 0) {
-            if(!instance_exists(783/* obj_choicer */))
-                choicer= instance_create(0, 0, 783/* obj_choicer */);
+            if(!instance_exists(obj_choicer))
+                choicer= instance_create(0, 0, obj_choicer);
             choicer.creator= id;
             halt= 5;
         }
@@ -384,7 +392,7 @@ while(n &lt; stringpos + 1) {
             if(newtyper == "A") global.typer= 47;
             if(newtyper == "a") global.typer= 60;
             if(newtyper == "R") global.typer= 76;
-            script_execute(150/* SCR_TEXTTYPE */, global.typer);
+            script_execute(SCR_TEXTTYPE, global.typer);
             global.facechange= 1;
             n++;
         }
@@ -422,7 +430,7 @@ while(n &lt; stringpos + 1) {
                 break;
             }
         } else  {
-            if(myx &gt; writingxend) script_execute(148/* SCR_NEWLINE */);
+            if(myx &gt; writingxend) script_execute(SCR_NEWLINE);
             myletter= string_char_at(originalstring, n);
             if(global.typer == 18) {
                 if(myletter == "l" || myletter == "i") myx+= 2;
@@ -437,6 +445,7 @@ while(n &lt; stringpos + 1) {
             }
             draw_set_font(myfont);
             draw_set_color(mycolor);
+            show_debug_message(myletter)
             if(shake &gt; 38) {
                 if(shake == 39) {
                     direction+= 10;
