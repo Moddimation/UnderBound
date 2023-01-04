@@ -5581,13 +5581,15 @@ switch(argument0) {
         global.msg[1]= "%%%";
         break;
     case 0:
-        i= 0;
+        /*i= 0;
         fileid= file_text_open_read("testlines.txt");
         while(file_text_eof(fileid) == 0) {
             global.msg[i]= file_text_read_string(fileid);
             file_text_readln(fileid);
             i++;
         }
-        file_text_close(fileid);
+        file_text_close(fileid);*/
+        global.msg[0]= "* UNDERTALE Compilation by Moddimation";
+        global.msg[1]= "%%%";
         break;
 }
