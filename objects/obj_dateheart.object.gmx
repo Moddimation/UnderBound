@@ -180,7 +180,7 @@ if(keyboard_multicheck_pressed(13/* ENTER */) &amp;&amp; movement == 1 &amp;&amp
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -197,7 +197,7 @@ if(keyboard_multicheck_pressed(13/* ENTER */) &amp;&amp; movement == 1 &amp;&amp
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y= obj_uborder.y - sprite_height;
+            <string>y= obj_dborder.y + 6;
 </string>
           </argument>
         </arguments>
@@ -226,6 +226,29 @@ if(keyboard_multicheck_pressed(13/* ENTER */) &amp;&amp; movement == 1 &amp;&amp
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_uborder">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y= obj_uborder.y - sprite_height;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_lborder">
       <action>
         <libid>1</libid>
@@ -246,29 +269,6 @@ if(keyboard_multicheck_pressed(13/* ENTER */) &amp;&amp; movement == 1 &amp;&amp
             <string>if(y &lt; obj_uborder.y + 4)
     y= global.idealborder[2] - sprite_height;
 else  x= obj_lborder.x - sprite_width;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_dborder">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>y= obj_dborder.y + 6;
 </string>
           </argument>
         </arguments>

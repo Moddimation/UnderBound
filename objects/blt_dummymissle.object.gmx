@@ -100,6 +100,34 @@ if(juice &lt; -60 &amp;&amp; destroy == 0) destroy= 1;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_heart">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(normal == 1 &amp;&amp; destroy == 0) {
+    snd_play(21/* snd_impact */);
+    destroy= 1;
+    normal= 0;
+    scr_damagestandard_x();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_maddummy">
       <action>
         <libid>1</libid>
@@ -130,34 +158,6 @@ if(juice &lt; -60 &amp;&amp; destroy == 0) destroy= 1;
     if(!instance_exists(184/* obj_shaker */)) scr_shake(4, 4, 2);
     destroy= 1;
     normal= 0;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_heart">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(normal == 1 &amp;&amp; destroy == 0) {
-    snd_play(21/* snd_impact */);
-    destroy= 1;
-    normal= 0;
-    scr_damagestandard_x();
 }
 </string>
           </argument>

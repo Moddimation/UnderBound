@@ -214,7 +214,7 @@ if(instance_exists(154/* obj_battlecontroller */) &amp;&amp; obj_battlecontrolle
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -232,16 +232,14 @@ if(instance_exists(154/* obj_battlecontroller */) &amp;&amp; obj_battlecontrolle
           <argument>
             <kind>1</kind>
             <string>if(ignore_border == 0) {
-    if(movement == 2 &amp;&amp; vspeed &lt; 0) vspeed= 0;
-    if(movement == 12) {
-        y= global.idealborder[2] + 4;
+    y= other.y - sprite_height;
+    if(movement == 2) {
         event_user(7);
-        if(vspeed &lt; 0) vspeed= 0;
-        if(movement == 12) jumpstage= 1;
+        jumpstage= 1;
+        vspeed= 0;
     }
-    y= other.y + other.sprite_height;
     if(confuse == 1 &amp;&amp; obj_battlecontroller.runaway != 1)
-        y= other.y + other.sprite_height + 8;
+        y= other.y - 8;
 }
 </string>
           </argument>
@@ -281,6 +279,40 @@ if(instance_exists(154/* obj_battlecontroller */) &amp;&amp; obj_battlecontrolle
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_uborder">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(ignore_border == 0) {
+    if(movement == 2 &amp;&amp; vspeed &lt; 0) vspeed= 0;
+    if(movement == 12) {
+        y= global.idealborder[2] + 4;
+        event_user(7);
+        if(vspeed &lt; 0) vspeed= 0;
+        if(movement == 12) jumpstage= 1;
+    }
+    y= other.y + other.sprite_height;
+    if(confuse == 1 &amp;&amp; obj_battlecontroller.runaway != 1)
+        y= other.y + other.sprite_height + 8;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_lborder">
       <action>
         <libid>1</libid>
@@ -309,38 +341,6 @@ if(instance_exists(154/* obj_battlecontroller */) &amp;&amp; obj_battlecontrolle
         x= other.x + other.sprite_width;
     if(confuse == 1 &amp;&amp; obj_battlecontroller.runaway != 1)
         x= other.x + other.sprite_width + 8;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_dborder">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(ignore_border == 0) {
-    y= other.y - sprite_height;
-    if(movement == 2) {
-        event_user(7);
-        jumpstage= 1;
-        vspeed= 0;
-    }
-    if(confuse == 1 &amp;&amp; obj_battlecontroller.runaway != 1)
-        y= other.y - 8;
 }
 </string>
           </argument>

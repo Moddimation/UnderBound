@@ -33,7 +33,7 @@ on= 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_toroverworld1">
+    <event eventtype="4" ename="obj_mainchara">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -60,7 +60,7 @@ on= 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_mainchara">
+    <event eventtype="4" ename="obj_toroverworld1">
       <action>
         <libid>1</libid>
         <id>603</id>

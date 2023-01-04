@@ -158,7 +158,7 @@ if(global.hp &lt;= 2) global.turntimer= -100;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -202,7 +202,7 @@ if(global.hp &lt;= 2) global.turntimer= -100;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_lborder">
+    <event eventtype="4" ename="obj_uborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -224,7 +224,7 @@ if(global.hp &lt;= 2) global.turntimer= -100;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_dborder">
+    <event eventtype="4" ename="obj_lborder">
       <action>
         <libid>1</libid>
         <id>603</id>

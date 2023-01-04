@@ -176,40 +176,6 @@ if(king == 1 &amp;&amp; zap == 0) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wizardorb_chaser">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(col &lt; 0) {
-    x-= random(2);
-    other.x+= random(2);
-    y-= random(2);
-    other.y+= random(2);
-    hspeed= -hspeed;
-    other.hspeed= -other.hspeed;
-    vspeed= -vspeed;
-    other.vspeed= -other.vspeed;
-    col= 3;
-    other.col= 3;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_heart">
       <action>
         <libid>1</libid>
@@ -243,6 +209,40 @@ if(heal == 1) {
     global.mnfight= 3;
     global.myfight= -1;
     with(object_index) instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_wizardorb_chaser">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(col &lt; 0) {
+    x-= random(2);
+    other.x+= random(2);
+    y-= random(2);
+    other.y+= random(2);
+    hspeed= -hspeed;
+    other.hspeed= -other.hspeed;
+    vspeed= -vspeed;
+    other.vspeed= -other.vspeed;
+    col= 3;
+    other.col= 3;
 }
 </string>
           </argument>

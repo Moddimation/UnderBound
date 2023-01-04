@@ -144,40 +144,6 @@ if(image_alpha &lt; 1) image_alpha+= 0.05;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_heart">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.invc &lt; 1) {
-    hurted= 1;
-    dmgamt= round(dmg - (global.df + global.adef) / 5);
-    if(dmgamt &lt; 1) dmgamt= 1;
-    global.hp-= dmgamt;
-    snd_play(53/* snd_hurt1 */);
-    global.hshake= 2;
-    global.shakespeed= 2;
-    global.vshake= 2;
-    instance_create(0, 0, 184/* obj_shaker */);
-    global.invc= 45;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
@@ -211,6 +177,40 @@ global.shakespeed= 2;
 global.vshake= 0;
 instance_create(0, 0, 184/* obj_shaker */);
 if(scr_monstersum() == 1) alarm[1]= 4;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_heart">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.invc &lt; 1) {
+    hurted= 1;
+    dmgamt= round(dmg - (global.df + global.adef) / 5);
+    if(dmgamt &lt; 1) dmgamt= 1;
+    global.hp-= dmgamt;
+    snd_play(53/* snd_hurt1 */);
+    global.hshake= 2;
+    global.shakespeed= 2;
+    global.vshake= 2;
+    instance_create(0, 0, 184/* obj_shaker */);
+    global.invc= 45;
+}
 </string>
           </argument>
         </arguments>

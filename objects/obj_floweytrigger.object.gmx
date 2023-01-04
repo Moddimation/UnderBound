@@ -40,6 +40,7 @@ if(alter == 1) {
     // obj_floweytalker1
     with(875) visible= 0;
 }
+flow_m= scr_marker(flow.x, flow.y, 1100);
 </string>
           </argument>
         </arguments>

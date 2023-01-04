@@ -8,7 +8,7 @@
   <parentName>blt_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,7 +52,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_lborder">
+    <event eventtype="4" ename="obj_uborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -74,7 +74,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_dborder">
+    <event eventtype="4" ename="obj_lborder">
       <action>
         <libid>1</libid>
         <id>603</id>

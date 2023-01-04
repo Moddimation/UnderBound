@@ -261,7 +261,7 @@ if(!instance_exists(142/* obj_battler */)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sur">
+    <event eventtype="4" ename="obj_solidnpcparent">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -278,93 +278,10 @@ if(!instance_exists(142/* obj_battler */)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.phasing == 0 &amp;&amp; global.interact == 0) {
-    if(global.facing == 1) {
-        if(collision_point(bbox_right + 3, bbox_bottom + 3, 820, 0, 1) == -4) {
-            x= xprevious + 3;
-            y= yprevious + 3;
-        } else  x= xprevious;
-    }
-    if(global.facing == 2) {
-        if(collision_point(bbox_left - 3, bbox_top - 3, 820, 0, 1) == -4) {
-            x= xprevious - 3;
-            y= yprevious - 3;
-        } else  y= yprevious;
-    }
-    if(global.facing == 0) {
-        x= xprevious;
-        y= yprevious + 3;
-    }
-    if(global.facing == 3) {
-        y= yprevious;
-        x= xprevious - 3;
-    }
-    if(obj_time.up == 1 &amp;&amp; obj_time.right == 1) {
-        x= xprevious;
-        y= yprevious;
-    }
-    if(obj_mainchara.x % 3 != 0) x--;
-    if(y % 3 != 0) y++;
-    moving= 0;
-}
-if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
+            <string>if(global.phasing == 0) {
     x= xprevious;
     y= yprevious;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_sul">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.phasing == 0 &amp;&amp; global.interact == 0) {
-    if(global.facing == 3) {
-        if(collision_point(bbox_left - 3, bbox_bottom + 3, 820, 0, 1) == -4) {
-            x= xprevious - 3;
-            y= yprevious + 3;
-        } else  x= xprevious;
-    }
-    if(global.facing == 2) {
-        if(collision_point(bbox_right + 3, bbox_top - 3, 820, 0, 1) == -4) {
-            x= xprevious + 3;
-            y= yprevious - 3;
-        } else  y= yprevious;
-    }
-    if(global.facing == 0) {
-        x= xprevious;
-        y= yprevious + 3;
-    }
-    if(global.facing == 1) {
-        y= yprevious;
-        x= xprevious + 3;
-    }
-    if(obj_time.up == 1 &amp;&amp; obj_time.left == 1) {
-        x= xprevious;
-        y= yprevious;
-    }
     moving= 0;
-    if(x % 3 != 0) x++;
-    if(y % 3 != 0) y++;
-}
-if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
-    x= xprevious;
-    y= yprevious;
 }
 </string>
           </argument>
@@ -430,7 +347,7 @@ if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&am
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_solidnpcparent">
+    <event eventtype="4" ename="obj_sul">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -447,17 +364,45 @@ if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&am
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.phasing == 0) {
+            <string>if(global.phasing == 0 &amp;&amp; global.interact == 0) {
+    if(global.facing == 3) {
+        if(collision_point(bbox_left - 3, bbox_bottom + 3, 820, 0, 1) == -4) {
+            x= xprevious - 3;
+            y= yprevious + 3;
+        } else  x= xprevious;
+    }
+    if(global.facing == 2) {
+        if(collision_point(bbox_right + 3, bbox_top - 3, 820, 0, 1) == -4) {
+            x= xprevious + 3;
+            y= yprevious - 3;
+        } else  y= yprevious;
+    }
+    if(global.facing == 0) {
+        x= xprevious;
+        y= yprevious + 3;
+    }
+    if(global.facing == 1) {
+        y= yprevious;
+        x= xprevious + 3;
+    }
+    if(obj_time.up == 1 &amp;&amp; obj_time.left == 1) {
+        x= xprevious;
+        y= yprevious;
+    }
+    moving= 0;
+    if(x % 3 != 0) x++;
+    if(y % 3 != 0) y++;
+}
+if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
     x= xprevious;
     y= yprevious;
-    moving= 0;
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sdr">
+    <event eventtype="4" ename="obj_sur">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -476,31 +421,31 @@ if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&am
             <kind>1</kind>
             <string>if(global.phasing == 0 &amp;&amp; global.interact == 0) {
     if(global.facing == 1) {
-        if(collision_point(bbox_right + 2, bbox_top - 2, 820, 0, 1) == -4) {
+        if(collision_point(bbox_right + 3, bbox_bottom + 3, 820, 0, 1) == -4) {
             x= xprevious + 3;
-            y= yprevious - 3;
+            y= yprevious + 3;
         } else  x= xprevious;
     }
-    if(global.facing == 0) {
-        if(collision_point(bbox_left - 3, bbox_bottom + 3, 820, 0, 1) == -4) {
+    if(global.facing == 2) {
+        if(collision_point(bbox_left - 3, bbox_top - 3, 820, 0, 1) == -4) {
             x= xprevious - 3;
-            y= yprevious + 3;
+            y= yprevious - 3;
         } else  y= yprevious;
     }
-    if(global.facing == 2) {
+    if(global.facing == 0) {
         x= xprevious;
-        y= yprevious - 3;
+        y= yprevious + 3;
     }
     if(global.facing == 3) {
         y= yprevious;
         x= xprevious - 3;
     }
-    if(obj_time.down == 1 &amp;&amp; obj_time.right == 1) {
+    if(obj_time.up == 1 &amp;&amp; obj_time.right == 1) {
         x= xprevious;
         y= yprevious;
     }
-    if(x % 3 != 0) x--;
-    if(y % 3 != 0) y--;
+    if(obj_mainchara.x % 3 != 0) x--;
+    if(y % 3 != 0) y++;
     moving= 0;
 }
 if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
@@ -557,6 +502,61 @@ if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&am
     moving= 0;
     if(x % 3 != 0) x++;
     if(y % 3 != 0) y--;
+}
+if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
+    x= xprevious;
+    y= yprevious;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sdr">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.phasing == 0 &amp;&amp; global.interact == 0) {
+    if(global.facing == 1) {
+        if(collision_point(bbox_right + 2, bbox_top - 2, 820, 0, 1) == -4) {
+            x= xprevious + 3;
+            y= yprevious - 3;
+        } else  x= xprevious;
+    }
+    if(global.facing == 0) {
+        if(collision_point(bbox_left - 3, bbox_bottom + 3, 820, 0, 1) == -4) {
+            x= xprevious - 3;
+            y= yprevious + 3;
+        } else  y= yprevious;
+    }
+    if(global.facing == 2) {
+        x= xprevious;
+        y= yprevious - 3;
+    }
+    if(global.facing == 3) {
+        y= yprevious;
+        x= xprevious - 3;
+    }
+    if(obj_time.down == 1 &amp;&amp; obj_time.right == 1) {
+        x= xprevious;
+        y= yprevious;
+    }
+    if(x % 3 != 0) x--;
+    if(y % 3 != 0) y--;
+    moving= 0;
 }
 if(global.interact == 5 || global.interact == 1 || global.interact == 3 &amp;&amp; global.phasing == 0) {
     x= xprevious;

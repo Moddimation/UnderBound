@@ -143,29 +143,6 @@ if(myinteract == 3 &amp;&amp; !instance_exists(mydialoguer)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_solidparent">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>action_move("000010000", 0);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_solidnpcparent">
       <action>
         <libid>1</libid>
@@ -184,6 +161,29 @@ if(myinteract == 3 &amp;&amp; !instance_exists(mydialoguer)) {
           <argument>
             <kind>1</kind>
             <string>action_move_to(xprevious, yprevious);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_solidparent">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>action_move("000010000", 0);
 </string>
           </argument>
         </arguments>

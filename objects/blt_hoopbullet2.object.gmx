@@ -70,7 +70,7 @@ else  {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -87,8 +87,8 @@ else  {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y+=6
-vspeed=-vspeed
+            <string>y-= 6;
+vspeed= -vspeed;
 </string>
           </argument>
         </arguments>
@@ -136,6 +136,30 @@ vspeed=-vspeed
           <argument>
             <kind>0</kind>
             <string>-hspeed</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_uborder">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y+=6
+vspeed=-vspeed
+</string>
           </argument>
         </arguments>
       </action>
@@ -215,30 +239,6 @@ vspeed=-vspeed
     instance_destroy();
     global.invc= global.inv;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_dborder">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>y-= 6;
-vspeed= -vspeed;
 </string>
           </argument>
         </arguments>

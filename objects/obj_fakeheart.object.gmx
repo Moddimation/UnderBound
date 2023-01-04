@@ -83,7 +83,7 @@ if(global.hp &lt; 1) script_execute(158/* scr_gameoverb */);
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_uborder">
+    <event eventtype="4" ename="obj_dborder">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +100,7 @@ if(global.hp &lt; 1) script_execute(158/* scr_gameoverb */);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y= other.y + other.sprite_height;
+            <string>y= other.y - sprite_height;
 </string>
           </argument>
         </arguments>
@@ -129,6 +129,29 @@ if(global.hp &lt; 1) script_execute(158/* scr_gameoverb */);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_uborder">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>y= other.y + other.sprite_height;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_lborder">
       <action>
         <libid>1</libid>
@@ -147,29 +170,6 @@ if(global.hp &lt; 1) script_execute(158/* scr_gameoverb */);
           <argument>
             <kind>1</kind>
             <string>x= other.x + other.sprite_width;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_dborder">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>y= other.y - sprite_height;
 </string>
           </argument>
         </arguments>
