@@ -5010,6 +5010,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_start</room>
+    <room>rooms\room_introstory</room>
+    <room>rooms\room_introimage</room>
+    <room>rooms\room_intromenu</room>
     <room>rooms\room_area1</room>
     <room>rooms\room_area1_2</room>
     <room>rooms\room_ruins1</room>
@@ -5036,9 +5039,6 @@
     <room>rooms\room_ruins15E</room>
     <room>rooms\room_ruins16</room>
     <room>rooms\room_ruins17</room>
-    <room>rooms\room_introstory</room>
-    <room>rooms\room_introimage</room>
-    <room>rooms\room_intromenu</room>
     <room>rooms\room_ruins18OLD</room>
     <room>rooms\room_ruins19</room>
     <room>rooms\room_torhouse1</room>

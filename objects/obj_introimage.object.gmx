@@ -81,6 +81,7 @@ global.msg[11]= " ^9 ^9 ^9 ^9 ^9 ^9 \\E2 %%";
 global.msg[12]= " ^9 ^9 ^9 ^9 ^9  \\E0 %%";
 global.msg[13]= " ^9 ^9 ^9 ^9 ^9 ^9 \\E0 %";
 global.msg[14]= " %%";
+show_debug_message("WOW")
 mywriter= instance_create(40, 140, OBJ_WRITER);
 alarm[0]= 5;
 </string>
@@ -155,8 +156,10 @@ fadercreator= global.faceemotion;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(act == 1) {
+            <string>show_debug_message("ONE")
+if(act == 1) {
     if(!instance_exists(OBJ_WRITER) &amp;&amp; skip == 0) {
+        show_debug_message("TWO")
         skip= 1;
         fader= instance_create(0, 0, obj_unfader);
         fader.tspeed= 0.05;
@@ -167,6 +170,7 @@ fadercreator= global.faceemotion;
         caster_set_volume(intromusic, vol);
     }
     if(global.faceemotion == 2 &amp;&amp; dongs == 0) {
+        show_debug_message("THREE")
         dongs= 1;
         instance_create(x, y, obj_introlast);
     }

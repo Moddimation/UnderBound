@@ -3,7 +3,7 @@ audio_channel_num(128);
 global.awfultest= 0;
 global.steam_int= 0;
 if(steam_initialised()) {
-    global.steam_int= 1;
+    global.steam_int= 0;
     if(steam_file_exists("system_information_962")) {
         exd= file_text_open_write("system_information_962");
         file_text_write_string(exd, "a");
