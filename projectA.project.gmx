@@ -3227,6 +3227,7 @@
     <script>scripts\scr_npc_anim.gml</script>
     <script>scripts\scr_npcdirspeed.gml</script>
     <script>scripts\scr_npcsetup.gml</script>
+    <script>scripts\scr_gotobattle.gml</script>
     <script>scripts\scr_interact.gml</script>
     <script>scripts\scr_onscreen.gml</script>
     <script>scripts\scr_depth.gml</script>

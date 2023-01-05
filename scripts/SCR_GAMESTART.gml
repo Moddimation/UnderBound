@@ -19,7 +19,7 @@ if(steam_initialised()) {
             steam_file_delete("system_information_962");
     }
 }
-global.debug= 0;
+global.debug= true;
 global.hp= 20;
 global.maxhp= 20;
 global.en= 20;

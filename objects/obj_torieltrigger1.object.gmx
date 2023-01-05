@@ -205,7 +205,7 @@ if(instance_exists(861/* obj_toroverworld3 */) &amp;&amp; conversation == 4 &amp
     global.typer= 4;
     global.interact= 1;
     global.facechoice= 1;
-    instance_create(0, 0, 779/* obj_dialoguer */);
+    instance_create(0, 0, obj_dialoguer);
     conversation= 1;
 }
 </string>
