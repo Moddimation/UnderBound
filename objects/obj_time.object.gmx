@@ -425,7 +425,8 @@ if(os_type != 0) global.osflavor= 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>room_goto(room+1);
+</string>
           </argument>
         </arguments>
       </action>

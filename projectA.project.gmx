@@ -3296,8 +3296,8 @@
   <fonts name="fonts">
     <font>fonts\fnt_wingdings</font>
     <font>fonts\fnt_main</font>
-    <font>fonts\fnt_maintext</font>
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_maintext</font>
     <font>fonts\fnt_plain</font>
     <font>fonts\fnt_plainbig</font>
     <font>fonts\fnt_dmg</font>

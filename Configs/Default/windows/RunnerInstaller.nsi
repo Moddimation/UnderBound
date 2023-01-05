@@ -23,15 +23,15 @@
 !endif
 
 !ifndef COMPANY_NAME
-!define COMPANY_NAME      ""
+!define COMPANY_NAME      "Moddination"
 !endif
 
 !ifndef COPYRIGHT_TXT
-!define COPYRIGHT_TXT     "(c)Copyright 2013"
+!define COPYRIGHT_TXT     "(c)Copyright 2023"
 !endif
 
 !ifndef FILE_DESC
-!define FILE_DESC         "Created with GameMaker:Studio"
+!define FILE_DESC         "Compiled by Moddimation"
 !endif
 
 !ifndef LICENSE_NAME
