@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\abc_123_a</sound>
     <sound>sound\snd_sparkle1</sound>
     <sound>sound\snd_speedup</sound>
     <sound>sound\snd_hero</sound>
