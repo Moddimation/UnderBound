@@ -1,0 +1,1 @@
+self.image_yscale= 5; self.alarm[9]= 1;

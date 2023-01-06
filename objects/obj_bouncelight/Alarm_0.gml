@@ -1,0 +1,2 @@
+inithspeed= hspeed;
+

@@ -1,0 +1,1 @@
+self.x+= self.sprite_width; self.image_xscale= -1;

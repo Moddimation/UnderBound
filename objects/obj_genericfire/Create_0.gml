@@ -1,0 +1,2 @@
+negaspeed= 0;
+

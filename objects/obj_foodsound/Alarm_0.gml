@@ -1,0 +1,6 @@
+if(soundtype == 2) snd_play(snd_spooky );
+if(soundtype == 0) snd_play(snd_power );
+instance_destroy();
+
+
+/*  */

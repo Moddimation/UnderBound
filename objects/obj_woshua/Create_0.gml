@@ -1,0 +1,24 @@
+scr_monstersetup(0, 0, 0, 0, 0);
+image_speed= 0;
+part1= 258;
+mypart1= instance_create(x, y, part1);
+hurtanim= 0;
+hurtsound= 43;
+talked= 0;
+whatiheard= -1;
+attacked= 0;
+killed= 0;
+global.heard= 0;
+takedamage= 0;
+mercymod= 5;
+sha= 0;
+shb= 0;
+dirtyjoke= 0;
+alphaup= 0;
+dub= 0;
+slime= 0;
+flex= 0;
+clean= 0;
+ht= 100;
+wd= 100;
+

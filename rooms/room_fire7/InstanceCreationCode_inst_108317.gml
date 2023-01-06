@@ -1,0 +1,1 @@
+self.alarm[10]= 1; self.fliptime= 20;

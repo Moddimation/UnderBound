@@ -1,0 +1,24 @@
+stayx= xstart - __view_get( e__VW.XView, 0 );
+stayy= ystart - __view_get( e__VW.YView, 0 );
+on= 1;
+ang= 1 + random(2) * choose(1, -1);
+if(ang > 0) ang/= 2;
+tx= 0;
+stringer= "MTT-BRAND STILL TOP-RATED    ||    SCHOOL CANCELLED OVER REACTIVATED PUZZLES    ||     ";
+stringer+= "SCIENTIST DISCOVERS HEALTH BENEFITS OF USING COMPUTER (JUST KIDDING LOL)   ||     ";
+stringer+= "LOCAL METTATON VERY RICH FAMOUS AND GORGEOUS ||    ";
+stringer+= "TINY VOLCANO MONSTER TRIES ITS BEST, RECEIVES TINY APPLAUSE ||    ";
+stringer+= "PYROPE IRONICALLY MISSES INVITATION TO THIS SCENARIO " + chr(ord("\"")) + "WOULD HAVE LOVED IT" + chr(ord("\"")) + "  ||    ";
+stringer+= "LOCAL PLANE CREATES HUGE LINE AT STORE BY SAYING " + chr(ord("\"")) + "IT\\'S NOT LIKE I WANT TO BUY THESE PRODUCTS OR ANYTHING" + chr(ord("\"")) + " CASHIER CONFUSED   ||     ";
+stringer+= "HOTLAND TECHNICAL MALFUNCTIONS ACCEDE AND RECEDE IN LINEAR PROGRESSION THROUGHOUT AREA  ||     ";
+stringer+= "WOSHUA CLEANS UP LOCAL CRIME, LITERALLY FINDS CRIMINALS AND DOUSES THEM IN SOAP, CRIME DOESN\\'T GO DOWN BUT IT SMELLS AMAZING   ||   ";
+stringer+= "HISTORIC NEWS TICKER HEADLINE SHORTAGE ||     ";
+write= 1;
+doom= 0;
+alarm[2]= 1;
+thischara= 1570;
+timertimer= 0;
+voff= 0;
+doomtimer= 0;
+doomx= 0;
+

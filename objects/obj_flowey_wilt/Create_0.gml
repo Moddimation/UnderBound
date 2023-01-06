@@ -1,0 +1,28 @@
+global.inbattle= 1;
+global.facing= 2;
+global.flag[20]= 0;
+global.faceemotion= 0;
+image_speed= 0;
+image_xscale= 2;
+image_yscale= 2;
+stepper= 0;
+doomcon= 0;
+shudder= 8;
+global.flag[17]= 1;
+obj_borderparent.visible= 0;
+obj_fakeheart.visible= 0;
+alarm[2]= 80;
+obj_fakeheart.move= 0;
+memx= obj_fakeheart.x;
+memy= obj_fakeheart.y;
+wind= caster_load("music/f_wind2.ogg");
+caster_loop(wind, 0.8, 0.8);
+vol= 0.8;
+global.border= 0;
+SCR_BORDERSETUP();
+writing= 0;
+con= 0;
+remno= -1;
+idno= 834783;
+fader= 0;
+

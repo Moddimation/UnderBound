@@ -1,0 +1,28 @@
+dsprite= 1353;
+usprite= 1362;
+lsprite= 1367;
+rsprite= 1363;
+dtsprite= 1353;
+utsprite= 1362;
+ltsprite= 1367;
+rtsprite= 1363;
+myinteract= 0;
+facing= 0;
+direction= 270;
+talkedto= 0;
+image_speed= 0;
+if(room == 50 && global.plot >= 43) instance_destroy();
+if(room == 53 && global.plot >= 46) instance_destroy();
+if(room == 64 && global.plot > 64) instance_destroy();
+gone= 0;
+if(global.flag[413] > 0) gone= 1;
+if(global.flag[67] == 1) gone= 1;
+if(global.plot > 200) instance_destroy();
+murder= 0;
+if(scr_murderlv() >= 2 && global.flag[27] == 0) murder= 1;
+if(global.flag[203] >= 16) murder= 1;
+if(room == 50 && murder == 1) gone= 1;
+if(room == 53 && murder == 1) gone= 1;
+if(gone == 1) instance_destroy();
+s_click= 0;
+

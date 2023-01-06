@@ -1,0 +1,3 @@
+moving++;
+speed= 0;
+

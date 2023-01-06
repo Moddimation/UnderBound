@@ -1,0 +1,6 @@
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, 16777215, image_alpha);
+if(fun == 0) script_execute(scr_npcdir , 2);
+scr_depth();
+
+/* */
+/*  */

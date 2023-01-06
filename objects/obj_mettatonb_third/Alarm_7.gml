@@ -1,0 +1,2 @@
+attacked= 2;
+

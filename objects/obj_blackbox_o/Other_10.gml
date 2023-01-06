@@ -1,0 +1,3 @@
+if(!collision_point(x + 30, y + 10, 1242, 0, 1) && !collision_point(x + 30, y + 10, 1240, 0, 1))
+    x+= 20;
+

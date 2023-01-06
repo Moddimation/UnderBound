@@ -1,0 +1,3 @@
+speed= myspeed;
+rememberhspeed= myspeed;
+

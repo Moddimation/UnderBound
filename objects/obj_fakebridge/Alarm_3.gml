@@ -1,0 +1,2 @@
+drawamt= sprite_width;
+

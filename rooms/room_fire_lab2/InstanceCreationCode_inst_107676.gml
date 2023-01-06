@@ -1,0 +1,1 @@
+self.image_xscale= 6; self.image_yscale= 3; self.xstring1= "* (Looks like Alphys\\'s work&  table.^1)&* (Seems dusty.)/%%"; self.xno= 0; if(global.flag[7] == 0 && global.flag[493] >= 10) {; self.xstring1= "* (Looks like Mettaton is&  undergoing repairs.)/%%"; self.met= scr_marker(400, 80, 1667); self.met.depth= 300000; };

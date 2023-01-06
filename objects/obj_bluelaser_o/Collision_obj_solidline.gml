@@ -1,0 +1,3 @@
+x= xprevious;
+hspeed= -hspeed;
+

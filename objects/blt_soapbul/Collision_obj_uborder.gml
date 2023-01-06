@@ -1,0 +1,3 @@
+y-= vspeed;
+vspeed= -vspeed;
+

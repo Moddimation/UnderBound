@@ -1,0 +1,12 @@
+draw_sprite(sprite_index, image_index, x, y);
+anim+= 0.1;
+if(global.flag[484] < 2)
+    draw_sprite_ext(spr_leverkey , anim, x + 34, y + 32, 1, 1, 0, 65535, 1);
+draw_sprite_part(2154, 0, 0, 0, 46, 39 - bedy, x + 2, y + 13 + bedy);
+if(global.flag[484] > 0) {
+    bedy+= 4;
+    if(bedy >= 30) bedy= 30;
+}
+
+
+/*  */

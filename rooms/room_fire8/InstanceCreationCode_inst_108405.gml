@@ -1,0 +1,1 @@
+self.alarm[2]= 1; self.myspeed= 0;

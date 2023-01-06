@@ -1,0 +1,1 @@
+self.sprite_index= 1142;

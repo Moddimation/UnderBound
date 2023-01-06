@@ -1,0 +1,3 @@
+x-= hspeed;
+hspeed= -hspeed;
+

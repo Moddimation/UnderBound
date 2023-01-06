@@ -1,0 +1,23 @@
+global.flag[282]= 1;
+scr_monstersetup();
+image_speed= 0;
+part1= 227;
+mypart1= instance_create(x + 72, y + 24, part1);
+alarm[9]= 8;
+hurtanim= 0;
+hurtsound= 38;
+talked= 0;
+whatiheard= -1;
+attacked= 0;
+killed= 0;
+global.heard= 0;
+takedamage= 0;
+mercymod= -50;
+sha= 0;
+shb= 0;
+ht= 200;
+wd= 240;
+applaud= 0;
+nothing= 0;
+boo= 0;
+

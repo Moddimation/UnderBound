@@ -1,0 +1,24 @@
+scr_monstersetup(0, 0, 0, 0, 0);
+image_speed= 0;
+part1= 342;
+mypart1= instance_create(x + 8, y + 108, part1);
+alarm[9]= 8;
+hurtanim= 0;
+hurtsound= 43;
+talked= 0;
+whatiheard= -1;
+attacked= 0;
+killed= 0;
+global.heard= 0;
+takedamage= 0;
+mercymod= 20;
+sha= 0;
+shb= 0;
+flex= 0;
+encourage= 0;
+criticize= 0;
+hug= 0;
+heat= 0;
+ht= sprite_height;
+wd= sprite_width;
+

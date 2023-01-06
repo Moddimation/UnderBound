@@ -1,0 +1,1 @@
+self.image_yscale= 5; self.image_xscale= 45; self.alarm[2]= 1; self.myspeed= 9;

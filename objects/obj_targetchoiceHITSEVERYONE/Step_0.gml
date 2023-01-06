@@ -1,0 +1,40 @@
+if(hspeed > 0 && x > obj_target.x + obj_target.sprite_width)
+    xxx= 1;
+if(hspeed < 0 && x < obj_target.x) xxx= 1;
+if(xxx == 1) {
+    global.damage= 0;
+    global.hurtanim[global.mytarget]= 5;
+    instance_destroy();
+    exit;
+} else  {
+    if(image_speed == 0 && keyboard_multicheck_pressed(13)) {
+        i= 0;
+        while(i < 3) {
+            if(global.monster[i] == 1) {
+                mons= global.monsterinstance[i];
+                hspeed= 0;
+                script_execute(scr_attackcalc );
+                global.damage= damage;
+                global.damage+= random(2);
+                myx= x + sprite_width / 2;
+                myperfectx= obj_target.x + obj_target.sprite_width / 2;
+                bonusfactor= abs(myx - myperfectx);
+                if(bonusfactor == 0) bonusfactor= 1;
+                global.stretch= (obj_target.sprite_width - bonusfactor) / obj_target.sprite_width;
+                if(bonusfactor <= 12) global.damage= round(global.damage * 2.2);
+                if(bonusfactor > 12)
+                    global.damage= round(global.damage * global.stretch * 2);
+                mons.takedamage= global.damage;
+                instance_create(mons.x + mons.sprite_width / 2 - 5, mons.y - 5, obj_slice );
+                global.hurtanim[i]= 1;
+                image_speed= 0.4;
+            }
+            i++;
+        }
+    }
+    if(global.myfight != 1) instance_destroy();
+    exit;
+}
+
+/* */
+/*  */

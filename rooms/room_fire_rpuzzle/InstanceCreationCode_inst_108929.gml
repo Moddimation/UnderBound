@@ -1,0 +1,1 @@
+self.myside= 5;

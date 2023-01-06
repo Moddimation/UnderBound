@@ -1,0 +1,1 @@
+self.image_xscale= 5; self.image_yscale= 7;

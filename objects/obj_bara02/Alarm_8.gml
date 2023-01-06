@@ -1,0 +1,2 @@
+snd_play(hurtsound);
+

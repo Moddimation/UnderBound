@@ -1,0 +1,23 @@
+siner= 0;
+freeze= 0;
+intense= 0;
+back= 0;
+tailsiner= 0;
+tailtype= 1;
+extend= 1.5;
+shimmy= 0;
+ch= -1;
+madech= 0;
+ch_color= 16777215;
+ch_color2= 16777215;
+o_o= 0;
+madetrash= 0;
+madetrash_b= 0;
+armtype= 0;
+hat= random(60);
+global.faceemotion= 0;
+global.flag[20]= 0;
+tail_t= 0;
+diff= 3;
+pause= 0;
+

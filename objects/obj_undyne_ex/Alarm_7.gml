@@ -1,0 +1,2 @@
+global.mnfight= 3;
+

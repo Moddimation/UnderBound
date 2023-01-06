@@ -1,0 +1,2 @@
+global.inbattle= 1;
+
