@@ -3,6 +3,8 @@ git add .
 git commit -m "Build Full"
 git push
 "C:\ProgramData\GameMakerStudio2-LTS\Cache\runtimes\runtime-2022.0.0.12/bin/igor/windows/x64/Igor.exe"  -j=8 -options=BUILD/buildhtml5.bff -v -- HTML5 Package
+cd BUILD/website
 git add .
-git commit -m "Build Full"
+git commit -m "Build"
 git push
+cd ../..
