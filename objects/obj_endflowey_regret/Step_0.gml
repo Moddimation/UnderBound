@@ -91,7 +91,7 @@ if(con == 2 && !instance_exists(OBJ_WRITER )) {
 }
 if(con == 4) {
     ini_open("undertale.ini");
-    true_end= ini_write_real("EndF", "EndF", 2);
+    ini_write_real("EndF", "EndF", 2);
     ini_close();
     room_goto(323);
 }

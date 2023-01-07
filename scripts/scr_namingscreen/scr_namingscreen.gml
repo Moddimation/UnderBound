@@ -294,7 +294,7 @@ function scr_namingscreen() {
 	    draw_text(90, 30, string_hash_to_newline("Name the fallen human."));
 	}
 	if(naming == 3) {
-	    iniread= ini_open("undertale.ini");
+	    ini_open("undertale.ini");
 	    if(ini_section_exists("General") && hasname == 1) {
 	        minutes= floor(time / 1800);
 	        seconds= round((time / 1800 - minutes) * 60);

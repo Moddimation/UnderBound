@@ -133,7 +133,7 @@ if(global.interact == 5) {
         draw_text(192 + xx, 126 + yy, string_hash_to_newline("NEXT: " + string(nextlevel)));
     }
     if(global.menuno == 4) {
-        iniread= ini_open("undertale.ini");
+        ini_open("undertale.ini");
         name= ini_read_string("General", "Name", "EMPTY");
         love= ini_read_real("General", "Love", 0);
         time= ini_read_real("General", "Time", 1);

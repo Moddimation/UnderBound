@@ -6,7 +6,7 @@ selected2= 0;
 selected3= 0;
 q= 0;
 name= "";
-iniread= ini_open("undertale.ini");
+ini_open("undertale.ini");
 if(ini_section_exists("General")) {
     name= ini_read_string("General", "Name", "");
     love= ini_read_real("General", "Love", 0);

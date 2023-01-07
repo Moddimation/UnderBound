@@ -12,7 +12,7 @@ if(myinteract == 1 && con == 0) {
 }
 if(drawthis == 1) {
     global.interact= 1;
-    iniread= ini_open("undertale.ini");
+    ini_open("undertale.ini");
     name= ini_read_string("General", "Name", "EMPTY");
     love= ini_read_real("General", "Love", 0);
     time= ini_read_real("General", "Time", 0);

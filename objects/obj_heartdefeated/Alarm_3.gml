@@ -1,4 +1,4 @@
-iniwrite= ini_open("undertale.ini");
+ini_open("undertale.ini");
 gs= ini_read_real("General", "Gameover", 0);
 ini_write_real("General", "Gameover", gs + 1);
 ini_close();
