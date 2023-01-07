@@ -4,7 +4,7 @@ function scr_monsterdefeat() {
 	    global.goldreward[3]+= global.goldreward[myself];
 	    global.vaporspeed= 0;
 	    global.monstersprite= sprite_index;
-	    ddd= instance_create(x, y, 155/* obj_vaporized_new */);
+	    ddd= instance_create(x, y, obj_vaporized_new );
 	    if(object_index == 224) {
 	        with(ddd) scr_newvapordata(1);
 	    }
@@ -142,7 +142,7 @@ function scr_monsterdefeat() {
 	if(killed == 0) {
 	    global.goldreward[3]+= floor(global.goldreward[myself] * (global.monstermaxhp[myself] - global.monsterhp[myself]) / global.monstermaxhp[myself]);
 	    global.monstersprite= sprite_index;
-	    ddd= instance_create(x, y, 159/* obj_spared */);
+	    ddd= instance_create(x, y, obj_spared );
 	    ddd.image_speed= 0;
 	    ddd.image_index= 1;
 	    global.flag[10]= 1;

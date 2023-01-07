@@ -11,7 +11,7 @@ function SCR_DIRECT(argument0, argument1, argument2, argument3, argument4, argum
 	global.bulletappearance= argument9;
 	i= 0;
 	while(i <= bulletnumber) {
-	    iii= instance_create(x, y, 680/* blt_direct */);
+	    iii= instance_create(x, y, blt_direct );
 	    iii.dmg= global.monsteratk[myself];
 	    i++;
 	}

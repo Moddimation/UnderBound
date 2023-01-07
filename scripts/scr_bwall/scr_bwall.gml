@@ -1,7 +1,7 @@
 function scr_bwall(argument0, argument1, argument2, argument3) {
 	i= 0;
 	while(i < argument3) {
-	    bone= instance_create(900, 900, 501/* obj_bonewall */);
+	    bone= instance_create(900, 900, obj_bonewall );
 	    bone.y= global.idealborder[3] - argument0;
 	    bone.hspeed= argument1;
 	    bone.x= 320 - argument2 * argument1;

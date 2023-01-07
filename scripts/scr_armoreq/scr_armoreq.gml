@@ -19,8 +19,8 @@ function scr_armoreq(argument0, argument1) {
 	    global.adef= 20;
 	    global.wstrength+= 10;
 	}
-	script_execute(75/* scr_itemnameb */);
-	script_execute(82/* scr_itemname */);
+	script_execute(scr_itemnameb );
+	script_execute(scr_itemname );
 
 
 

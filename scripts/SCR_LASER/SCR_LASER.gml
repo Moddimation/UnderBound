@@ -9,7 +9,7 @@ function SCR_LASER(argument0, argument1, argument2, argument3, argument4, argume
 	global.bulletvariable[7]= argument7;
 	global.bulletvariable[8]= argument8;
 	global.bulletappearance= argument9;
-	instance_create(x, y, 683/* blt_laser */);
+	instance_create(x, y, blt_laser );
 
 
 

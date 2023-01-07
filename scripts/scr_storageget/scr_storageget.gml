@@ -9,13 +9,13 @@ function scr_storageget(argument0, argument1) {
 	        break;
 	    } else  {
 	        if(i == 10) {
-	            script_execute(87/* scr_itemnospace */);
+	            script_execute(scr_itemnospace );
 	            break;
 	        } else  i++;
 	    }
 	}
-	script_execute(75/* scr_itemnameb */);
-	script_execute(71/* scr_storagename */, 300);
+	script_execute(scr_itemnameb );
+	script_execute(scr_storagename , 300);
 
 
 

@@ -1,7 +1,7 @@
 function scr_load() {
 	filechoicebk= global.filechoice;
 	room_set_persistent(global.currentroom, 0);
-	script_execute(62/* SCR_GAMESTART */);
+	script_execute(SCR_GAMESTART );
 	global.filechoice= filechoicebk;
 	file= "file" + string(global.filechoice);
 	myfileid= file_text_open_read(file);
@@ -68,7 +68,7 @@ function scr_load() {
 	file_text_close(myfileid);
 	global.hp= global.maxhp;
 	global.en= global.maxen;
-	script_execute(59/* scr_tempsave */);
+	script_execute(scr_tempsave );
 	if(global.currentroom < 75) global.area= 0;
 	if(global.currentroom >= 75) global.area= 1;
 	global.flag[360]= 0;

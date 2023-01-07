@@ -735,7 +735,7 @@ function scr_papcall() {
 	        global.msg[2]= "HUH^1? SANS ISN\\'T&PLAYING WITH HIS&TELESCOPE?/";
 	        global.msg[3]= "\\\\E0WOWIE!!^1! MAYBE HE&WENT TO WORK!!!/";
 	        global.msg[4]= "\\\\E2WOW!!^1! AM I&ALLOWED TO BE&PROUD???/%%";
-	        if(instance_exists(1022/* obj_sans_room */)) {
+	        if(instance_exists(obj_sans_room )) {
 	            scr_papface(1, 3);
 	            global.msg[2]= "HUH^1? MY BROTHER^1?&OF COURSE HE HAS&A TELESCOPE./";
 	            global.msg[3]= "\\\\E0SANS LOVES&OUTER SPACEY&SCI-FI STUFF./";
@@ -950,7 +950,7 @@ function scr_papcall() {
 	        scr_papface(1, 3);
 	        global.msg[2]= "YOU CAN SEE YOUR&REFLECTION IN A&PUDDLE^1, BUT.../";
 	        global.msg[3]= "\\\\E1DON\\'T LET A BODY&OF WATER DETERMINE&YOUR SELF-WORTH!!!/%%";
-	        if(instance_exists(1115/* obj_mkid_actor */)) {
+	        if(instance_exists(obj_mkid_actor )) {
 	            scr_papface(1, 3);
 	            global.msg[2]= "HMMM^1? YOU\\'RE&HANGING OUT&WITH A FRIEND?/";
 	            global.msg[3]= "THEN MAYBE YOU&SHOULDN\\'T TALK&TO ME.../";
@@ -1144,7 +1144,7 @@ function scr_papcall() {
 	            global.msg[2]= "STILL WAITING&OUTSIDE HER&HOUSE...?/";
 	            global.msg[3]= "\\\\E0YEAH^1, I DO THAT&SOMETIMES^1, TOO!/%%";
 	        }
-	        if(instance_exists(1026/* obj_papyrus_room */)) {
+	        if(instance_exists(obj_papyrus_room )) {
 	            global.msg[2]= "THAT\\'S UNDYNE\\'S&HOUSE./";
 	            global.msg[3]= "YOU KNOW^1, THE&ONE WITH THE&SKELETON IN FRONT./%%";
 	        }
@@ -1914,7 +1914,7 @@ function scr_papcall() {
 	                global.msg[2]= "* Seriously!!/%%";
 	            }
 	        }
-	        if(!instance_exists(1022/* obj_sans_room */)) {
+	        if(!instance_exists(obj_sans_room )) {
 	            scr_papface(1, 3);
 	            global.msg[2]= "MY BROTHER ISN\\'T&EVEN THERE???/";
 	            global.msg[3]= "\\\\E1WASN\\'T HE SLACKING&OFF BY SELLING&HOTDOGS?/";
@@ -2401,7 +2401,7 @@ function scr_papcall() {
 	                global.msg[2]= "I GUESS THAT&MAKES SENSE!/%%";
 	            }
 	        }
-	        if(instance_exists(35/* obj_gaster_follower_a */))
+	        if(instance_exists(obj_gaster_follower_a ))
 	            global.msg[1]= "* (The phone won\\'t turn on.)/%%";
 	        break;
 	    case 55:
@@ -2477,7 +2477,7 @@ function scr_papcall() {
 	                global.msg[11]= "* (He doesn\\'t even&  HAVE eyes!!!)/%%";
 	            }
 	        }
-	        if(instance_exists(37/* obj_gaster_follower_c */))
+	        if(instance_exists(obj_gaster_follower_c ))
 	            global.msg[1]= "* (The phone won\\'t turn on.)/%%";
 	        break;
 	    case 53:
@@ -2513,7 +2513,7 @@ function scr_papcall() {
 	                global.msg[3]= "\\\\E3A HEART THAT&UNDYNE HAS MADE&NAUSEOUS?/%%";
 	            }
 	        }
-	        if(instance_exists(36/* obj_gaster_follower_b */))
+	        if(instance_exists(obj_gaster_follower_b ))
 	            global.msg[1]= "* (The phone won\\'t turn on.)/%%";
 	        break;
 	    case 52:
@@ -2820,7 +2820,7 @@ function scr_papcall() {
 	                scr_undface(14, 2);
 	                global.msg[15]= "* YOU DON\\'T HAVE TO&  SAY THAT^1, PAPYRUS!!/%%";
 	            }
-	            if(instance_exists(1306/* obj_royal_rabbitbounce */)) {
+	            if(instance_exists(obj_royal_rabbitbounce )) {
 	                scr_undface(1, 1);
 	                global.msg[2]= "* What!^1?&* Royal Guards are&  blocking the way!?/";
 	                global.msg[3]= "\\\\E2* Then I\\'ll tell them&  to...!/";
@@ -2858,7 +2858,7 @@ function scr_papcall() {
 	    scr_papface(1, 0);
 	    global.msg[2]= "I DON\\'T HAVE&ANYTHING ELSE TO&SAY./%%";
 	}
-	if(dontplay == 0) snd_play(104/* snd_phone */);
+	if(dontplay == 0) snd_play(snd_phone );
 	global.flag[462]++;
 
 

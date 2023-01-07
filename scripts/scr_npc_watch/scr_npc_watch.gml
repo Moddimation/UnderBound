@@ -1,5 +1,5 @@
 function scr_npc_watch(argument0) {
-	if(argument0 == 0 && instance_exists(1570/* obj_mainchara */)) {
+	if(argument0 == 0 && instance_exists(obj_mainchara )) {
 	    xdist= obj_mainchara.x + obj_mainchara.sprite_width / 2 - x + sprite_width / 2;
 	    ydist= obj_mainchara.bbox_top - bbox_top;
 	    if(abs(xdist) >= abs(ydist)) {
@@ -10,7 +10,7 @@ function scr_npc_watch(argument0) {
 	        else  sprite_index= utsprite;
 	    }
 	}
-	if(argument0 == 1 && instance_exists(1570/* obj_mainchara */)) {
+	if(argument0 == 1 && instance_exists(obj_mainchara )) {
 	    xdist= obj_mainchara.x + obj_mainchara.sprite_width / 2 - x + sprite_width / 2;
 	    ydist= obj_mainchara.bbox_top - bbox_top;
 	    if(abs(xdist) >= abs(ydist)) {

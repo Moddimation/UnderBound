@@ -5,7 +5,7 @@ function scr_phone_moveup(argument0, argument1) {
 	    i--;
 	}
 	global.phone[0]= argument1;
-	script_execute(70/* scr_phonename */);
+	script_execute(scr_phonename );
 
 
 

@@ -5,8 +5,8 @@ function scr_storageshift(argument0, argument1, argument2) {
 	    global.flag[i + argument2]= global.flag[i + argument2 + 1];
 	    i++;
 	}
-	script_execute(75/* scr_itemnameb */);
-	script_execute(71/* scr_storagename */, 300);
+	script_execute(scr_itemnameb );
+	script_execute(scr_storagename , 300);
 
 
 

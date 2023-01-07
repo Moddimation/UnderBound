@@ -9,13 +9,13 @@ function scr_itemget(argument0) {
 	        break;
 	    } else  {
 	        if(i == 8) {
-	            script_execute(87/* scr_itemnospace */);
+	            script_execute(scr_itemnospace );
 	            break;
 	        } else  i++;
 	    }
 	}
-	script_execute(75/* scr_itemnameb */);
-	script_execute(82/* scr_itemname */);
+	script_execute(scr_itemnameb );
+	script_execute(scr_itemname );
 
 
 

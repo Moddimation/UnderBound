@@ -133,7 +133,7 @@ function SCR_BORDERSETUP() {
 	}
 	if(global.border == 22) {
 	    offpurple= 0;
-	    if(instance_exists(363/* obj_purpleheart */)) {
+	    if(instance_exists(obj_purpleheart )) {
 	        offpurple= obj_purpleheart.yzero;
 	        if(offpurple > 250) offpurple= 250;
 	    }
@@ -145,7 +145,7 @@ function SCR_BORDERSETUP() {
 	}
 	if(global.border == 23) {
 	    offpurple= 0;
-	    if(instance_exists(363/* obj_purpleheart */)) {
+	    if(instance_exists(obj_purpleheart )) {
 	        offpurple= obj_purpleheart.yzero;
 	        if(offpurple > 250) offpurple= 250;
 	    }

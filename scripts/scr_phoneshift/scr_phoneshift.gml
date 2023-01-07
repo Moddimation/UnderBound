@@ -5,7 +5,7 @@ function scr_phoneshift(argument0, argument1) {
 	    global.phone[i]= global.phone[i + 1];
 	    i++;
 	}
-	script_execute(70/* scr_phonename */);
+	script_execute(scr_phonename );
 
 
 

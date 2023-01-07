@@ -30,15 +30,15 @@ function scr_damagestandard(argument0, argument1, argument2, argument3, argument
 	    if(dmgamt < 1) dmgamt= 1;
 	    global.hp-= dmgamt;
 	    if(global.hp < 0) global.hp= 0;
-	    snd_play(53/* snd_hurt1 */);
+	    snd_play(snd_hurt1 );
 	    global.hshake= 2;
 	    global.shakespeed= 2;
 	    global.vshake= 2;
-	    instance_create(0, 0, 184/* obj_shaker */);
+	    instance_create(0, 0, obj_shaker );
 	    global.invc= global.inv;
 	    if(argument4 > 0) global.invc= argument4 / 20 * global.inv;
 	    if(global.battlegroup == 22 && global.hp < 1)
-	        obj_torielboss.sprite_index= 726/* spr_torielboss_mouthcover */;
+	        obj_torielboss.sprite_index= spr_torielboss_mouthcover ;
 	}
 	dmg= puredmg;
 

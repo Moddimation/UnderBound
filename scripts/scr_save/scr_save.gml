@@ -1,8 +1,8 @@
 function scr_save() {
-	script_execute(57/* scr_saveprocess */);
+	script_execute(scr_saveprocess );
 	filechoicebk2= global.filechoice;
 	global.filechoice= 9;
-	script_execute(57/* scr_saveprocess */);
+	script_execute(scr_saveprocess );
 	global.filechoice= filechoicebk2;
 	iniwrite= ini_open("undertale.ini");
 	ini_write_string("General", "Name", global.charname);

@@ -13,7 +13,7 @@ function SCR_TEXT(argument0) {
 	    case 3005:
 	        global.msg[0]= " ";
 	        if(global.monster[0] == 1) {
-	            with(global.monsterinstance[0]) script_execute(163/* scr_mercystandard */);
+	            with(global.monsterinstance[0]) script_execute(scr_mercystandard );
 	            adder= " ";
 	            adder= "\\\\W ";
 	            if(global.monsterinstance[0].mercy < 0) {
@@ -27,7 +27,7 @@ function SCR_TEXT(argument0) {
 	        }
 	        global.msg[0]+= "\\\\W &";
 	        if(global.monster[1] == 1) {
-	            with(global.monsterinstance[1]) script_execute(163/* scr_mercystandard */);
+	            with(global.monsterinstance[1]) script_execute(scr_mercystandard );
 	            if(global.monsterinstance[1].mercy < 0 && global.flag[22] == 0)
 	                global.msg[0]+= "\\\\Y";
 	            if(global.monsterinstance[1].mercy < 0 && global.flag[22] == 2)
@@ -38,7 +38,7 @@ function SCR_TEXT(argument0) {
 	        }
 	        global.msg[0]+= "\\\\W &";
 	        if(global.monster[2] == 1) {
-	            with(global.monsterinstance[2]) script_execute(163/* scr_mercystandard */);
+	            with(global.monsterinstance[2]) script_execute(scr_mercystandard );
 	            if(global.monsterinstance[2].mercy < 0 && global.flag[22] == 0)
 	                global.msg[0]+= "\\\\Y";
 	            if(global.monsterinstance[2].mercy < 0 && global.flag[22] == 2)
@@ -54,7 +54,7 @@ function SCR_TEXT(argument0) {
 	        i= 0;
 	        while(i < 3) {
 	            if(global.monster[i] == 1) {
-	                with(global.monsterinstance[i]) script_execute(163/* scr_mercystandard */);
+	                with(global.monsterinstance[i]) script_execute(scr_mercystandard );
 	                if(global.monsterinstance[i].mercy < 0 && global.flag[22] == 0)
 	                    global.msg[0]= "\\\\Y ";
 	                if(global.monsterinstance[i].mercy < 0 && global.flag[22] == 2)
@@ -220,7 +220,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 1510:
 	        i= round(random(14));
-	        script_execute(82/* scr_itemname */);
+	        script_execute(scr_itemname );
 	        if(i <= 12)
 	            global.msg[0]= "* The " + global.itemname[global.menucoord[6]] + " was&  put away.";
 	        if(i > 12)
@@ -231,7 +231,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 1508:
 	        i= round(random(14));
-	        script_execute(71/* scr_storagename */, 300);
+	        script_execute(scr_storagename , 300);
 	        if(i <= 12)
 	            global.msg[0]= "* The " + global.itemname[global.menucoord[7]] + " was&  taken out.";
 	        if(i > 12)
@@ -257,8 +257,8 @@ function SCR_TEXT(argument0) {
 	    case 1503:
 	        if(global.choice == 0) {
 	            if(global.item[0] != 0 || global.flag[300] != 0) {
-	                if(!instance_exists(1526/* obj_itemswapper */))
-	                    instance_create(0, 0, 1526/* obj_itemswapper */);
+	                if(!instance_exists(obj_itemswapper ))
+	                    instance_create(0, 0, obj_itemswapper );
 	                global.msg[0]= "  %%";
 	            } else  {
 	                gx= floor(random(3));
@@ -447,7 +447,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 1056:
 	        if(global.choice == 0) {
-	            if(instance_exists(933/* obj_ladiesfishingrod */)) {
+	            if(instance_exists(obj_ladiesfishingrod )) {
 	                obj_ladiesfishingrod.reeled= 1;
 	                obj_ladiesfishingrod.image_index= 1;
 	            }
@@ -579,10 +579,10 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 1050:
-	        script_execute(63/* scr_cost */, 15);
+	        script_execute(scr_cost , 15);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 17);
+	            script_execute(scr_itemget , 17);
 	            if(noroom == 0) {
 	                global.gold-= 15;
 	                global.flag[60]+= 15;
@@ -644,11 +644,11 @@ function SCR_TEXT(argument0) {
 	    case 1048:
 	        scr_itemcheck(26);
 	        if(itemcount < 3) {
-	            if(global.flag[85] == 0) script_execute(63/* scr_cost */, 25);
-	            if(global.flag[85] == 1) script_execute(63/* scr_cost */, 15);
+	            if(global.flag[85] == 0) script_execute(scr_cost , 25);
+	            if(global.flag[85] == 1) script_execute(scr_cost , 15);
 	            if(global.choice == 0 && afford == 1 && doak == 0) {
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 17);
+	                script_execute(scr_itemget , 17);
 	                if(noroom == 0) {
 	                    if(global.flag[85] == 0) {
 	                        global.gold-= 25;
@@ -887,7 +887,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 23);
+	                script_execute(scr_itemget , 23);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Abandoned&  Quiche.)/%%";
@@ -913,7 +913,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 24);
+	                script_execute(scr_itemget , 24);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Old Tutu.)/%%";
@@ -945,7 +945,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 26);
+	                script_execute(scr_itemget , 26);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got a Punch Card.)/%%";
@@ -974,7 +974,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 25);
+	                script_execute(scr_itemget , 25);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Ballet Shoes.)/%%";
@@ -995,7 +995,7 @@ function SCR_TEXT(argument0) {
 	        global.msg[0]= " %%";
 	        if(global.choice == 0 && global.flag[85] == 0) {
 	            global.interact= 1;
-	            if(instance_exists(1160/* obj_carrybird */)) {
+	            if(instance_exists(obj_carrybird )) {
 	                obj_carrybird.carry= 1;
 	                // obj_mainchara
 	                with(1570) uncan= 1;
@@ -1014,7 +1014,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 0);
+	                script_execute(scr_itemget , 0);
 	                i= 0;
 	                while(i < 8) {
 	                    if(global.item[i] == 27) noroom= 2;
@@ -1044,7 +1044,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 36);
+	                script_execute(scr_itemget , 36);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Instant Noodles.)/%%";
@@ -1067,7 +1067,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 47);
+	                script_execute(scr_itemget , 47);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Burnt Pan.)/%%";
@@ -1089,7 +1089,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 46);
+	                script_execute(scr_itemget , 46);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Stained Apron.)/%%";
@@ -1111,7 +1111,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 40);
+	                script_execute(scr_itemget , 40);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Glamburger.)/%%";
@@ -1152,7 +1152,7 @@ function SCR_TEXT(argument0) {
 	                noroom= -1;
 	                doak= 1;
 	                if(scr_murderlv() >= 16) scr_itemget(52);
-	                else  script_execute(84/* scr_itemget */, 51);
+	                else  script_execute(scr_itemget , 51);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Worn Dagger.)/%%";
@@ -1175,8 +1175,8 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= -1;
 	                doak= 1;
-	                if(scr_murderlv() < 16) script_execute(84/* scr_itemget */, 50);
-	                else  script_execute(84/* scr_itemget */, 53);
+	                if(scr_murderlv() < 16) script_execute(scr_itemget , 50);
+	                else  script_execute(scr_itemget , 53);
 	            }
 	            if(noroom == 0) {
 	                global.msg[0]= "* (You got the Heart-shaped&  Locket.)/%%";
@@ -1207,10 +1207,10 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 1007:
-	        script_execute(63/* scr_cost */, 12);
+	        script_execute(scr_cost , 12);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 17);
+	            script_execute(scr_itemget , 17);
 	            if(noroom == 0) {
 	                global.gold-= 12;
 	                global.flag[60]+= 12;
@@ -1294,7 +1294,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            if(global.flag[34] < 4 && doak == 0) {
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 1);
+	                script_execute(scr_itemget , 1);
 	                if(noroom == 0) global.flag[34]++;
 	            }
 	            if(noroom == 0) {
@@ -1338,10 +1338,10 @@ function SCR_TEXT(argument0) {
 	        global.msg[1]= " ";
 	        break;
 	    case 889:
-	        script_execute(80/* scr_itemcheck */, 5);
+	        script_execute(scr_itemcheck , 5);
 	        if(global.choice == 0 && haveit == 0 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 5);
+	            script_execute(scr_itemget , 5);
 	        }
 	        if(noroom == 0)
 	            global.msg[0]= "* You took a piece.&* Boy^1, that\\'s heavy./%%";
@@ -1359,10 +1359,10 @@ function SCR_TEXT(argument0) {
 	        global.msg[1]= " ";
 	        break;
 	    case 871:
-	        script_execute(63/* scr_cost */, 7);
+	        script_execute(scr_cost , 7);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 7);
+	            script_execute(scr_itemget , 7);
 	            if(noroom == 0) {
 	                global.gold-= 7;
 	                global.flag[59]+= 7;
@@ -1384,10 +1384,10 @@ function SCR_TEXT(argument0) {
 	        global.msg[1]= " ";
 	        break;
 	    case 867:
-	        script_execute(63/* scr_cost */, 18);
+	        script_execute(scr_cost , 18);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 10);
+	            script_execute(scr_itemget , 10);
 	            if(noroom == 0) {
 	                global.gold-= 18;
 	                global.flag[59]+= 18;
@@ -1404,7 +1404,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 866:
 	        if(doak == 0) {
-	            script_execute(84/* scr_itemget */, 12);
+	            script_execute(scr_itemget , 12);
 	            if(noroom == 0) global.flag[100]= 1;
 	            doak= 1;
 	        }
@@ -1442,22 +1442,22 @@ function SCR_TEXT(argument0) {
 	            global.msg[0]= "* You hear a clicking sound./%%";
 	            if(room == 24 && global.plot < 14) {
 	                global.plot= 14;
-	                snd_play(132/* snd_switchpull_n */);
+	                snd_play(snd_switchpull_n );
 	            }
 	            if(room == 25 && global.plot < 15) {
 	                global.plot= 15;
-	                snd_play(132/* snd_switchpull_n */);
+	                snd_play(snd_switchpull_n );
 	            }
 	            if(room == 26 && global.plot < 16) {
 	                global.plot= 16;
-	                snd_play(132/* snd_switchpull_n */);
+	                snd_play(snd_switchpull_n );
 	            }
 	        }
 	        if(global.choice == 1) global.msg[0]= "%%";
 	        break;
 	    case 861:
 	        if(doak == 0) {
-	            script_execute(84/* scr_itemget */, 13);
+	            script_execute(scr_itemget , 13);
 	            if(noroom == 0) global.flag[102]= 1;
 	            doak= 1;
 	        }
@@ -1482,7 +1482,7 @@ function SCR_TEXT(argument0) {
 	    case 853:
 	        if(global.flag[6] == 0) {
 	            if(doak == 0) {
-	                script_execute(84/* scr_itemget */, 11);
+	                script_execute(scr_itemget , 11);
 	                if(noroom == 0) global.flag[103]= 2;
 	                doak= 1;
 	            }
@@ -1490,7 +1490,7 @@ function SCR_TEXT(argument0) {
 	            if(noroom == 1) global.msg[0]= "* You are carrying too&  much./%%";
 	        } else  {
 	            if(doak == 0) {
-	                script_execute(84/* scr_itemget */, 63);
+	                script_execute(scr_itemget , 63);
 	                if(noroom == 0) global.flag[103]= 2;
 	                doak= 1;
 	            }
@@ -1593,7 +1593,7 @@ function SCR_TEXT(argument0) {
 	        global.msg[5]= "\\\\TS \\\\F0 \\\\T0 %";
 	        global.msg[6]= "* (What should you say?)&         Let\\'s be    What a&         friends     loser\\\\C";
 	        global.msg[7]= " ";
-	        if(scr_murderlv() >= 7 && instance_exists(1004/* obj_papyrus8 */) && obj_papyrus8.murder == 1) {
+	        if(scr_murderlv() >= 7 && instance_exists(obj_papyrus8 ) && obj_papyrus8.murder == 1) {
 	            global.msg[0]= "\\\\E0WOWIE!^1!&YOU DID IT!!!/";
 	            global.msg[1]= "YOU DIDN\\'T DO A&VIOLENCE!!!/";
 	            global.msg[2]= "\\\\E5TO BE HONEST^1,&I WAS A LITTLE&AFRAID.../";
@@ -1737,8 +1737,8 @@ function SCR_TEXT(argument0) {
 	    case 832:
 	        global.msg[0]= " %%";
 	        global.msg[1]= " ";
-	        if(global.choice == 0 && !instance_exists(1035/* obj_starchecker */))
-	            instance_create(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), 1035/* obj_starchecker */);
+	        if(global.choice == 0 && !instance_exists(obj_starchecker ))
+	            instance_create(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), obj_starchecker );
 	        break;
 	    case 831:
 	        if(obj_mainchara.dsprite != 1010) {
@@ -1759,8 +1759,8 @@ function SCR_TEXT(argument0) {
 	        global.msg[0]= " %%";
 	        global.msg[1]= " ";
 	        if(global.choice == 0) {
-	            if(!instance_exists(1035/* obj_starchecker */))
-	                instance_create(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), 1035/* obj_starchecker */);
+	            if(!instance_exists(obj_starchecker ))
+	                instance_create(__view_get( e__VW.XView, 0 ), __view_get( e__VW.YView, 0 ), obj_starchecker );
 	            obj_mainchara.dsprite= 1010;
 	            obj_mainchara.lsprite= 1011;
 	        } else  {
@@ -1816,7 +1816,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 827:
 	        global.msg[0]= "* (There\\'s an empty pie tin&  inside the stove.)/%%";
-	        if(instance_exists(1025/* obj_papyrusparent */)) {
+	        if(instance_exists(obj_papyrusparent )) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "\\\\E0MY BROTHER ALWAYS&GOES OUT TO EAT^1.&BUT.../";
 	            global.msg[2]= "\\\\E3RECENTLY^1, HE TRIED&\\'BAKING\\' SOMETHING./";
@@ -1841,7 +1841,7 @@ function SCR_TEXT(argument0) {
 	        } else  global.msg[0]= " %%";
 	        break;
 	    case 821:
-	        if(instance_exists(1025/* obj_papyrusparent */)) {
+	        if(instance_exists(obj_papyrusparent )) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "THAT\\'S MY ROOM^1!/";
 	            global.msg[2]= "IF YOU\\'VE&FINISHED LOOKING&AROUND.../";
@@ -1869,7 +1869,7 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 815:
-	        if(instance_exists(1025/* obj_papyrusparent */)) {
+	        if(instance_exists(obj_papyrusparent )) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "THERE ARE NO&SKELETONS INSIDE&MY CLOSET!!!/";
 	            global.msg[2]= "\\\\E3EXCEPT ME&SOMETIMES./";
@@ -1886,7 +1886,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[0]= "* (Clothes are hung up&  neatly inside.)/%%";
 	        else  {
 	            global.msg[0]= " %%";
-	            if(instance_exists(1025/* obj_papyrusparent */)) {
+	            if(instance_exists(obj_papyrusparent )) {
 	                scr_papface(0, 0);
 	                global.msg[1]= "IT\\'S OK TO BE&INTIMIDATED BY&MY FASHION SENSE./%%";
 	            }
@@ -1943,7 +1943,7 @@ function SCR_TEXT(argument0) {
 	    case 808:
 	        if(global.choice == 0) {
 	            global.msg[0]= "* well^1, if you insist..^1.&* i\\'ll pry myself away&  from my work.../%%";
-	            if(instance_exists(1090/* obj_sans_sentry2 */)) obj_sans_sentry2.con= 1;
+	            if(instance_exists(obj_sans_sentry2 )) obj_sans_sentry2.con= 1;
 	        }
 	        if(global.choice == 1) global.msg[0]= "* OK^1. have fun./%%";
 	        break;
@@ -2000,7 +2000,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) global.msg[0]= "\\\\E2* bone appetit./%%";
 	        else  {
 	            global.msg[0]= "\\\\E2* more for me./%%";
-	            if(instance_exists(1466/* obj_grillbynpc_sansdate */))
+	            if(instance_exists(obj_grillbynpc_sansdate ))
 	                obj_grillbynpc_sansdate.burg= 2;
 	        }
 	        break;
@@ -2105,7 +2105,7 @@ function SCR_TEXT(argument0) {
 	                if(global.choice == 0) {
 	                    global.msg[0]= "* (You took an umbrella.)/%%";
 	                    global.flag[85]= 1;
-	                    if(instance_exists(1149/* obj_umbrellabox */))
+	                    if(instance_exists(obj_umbrellabox ))
 	                        obj_umbrellabox.image_index= 1;
 	                    obj_mainchara.dsprite= 1016;
 	                    obj_mainchara.rsprite= 1018;
@@ -2116,7 +2116,7 @@ function SCR_TEXT(argument0) {
 	                if(global.choice == 0) {
 	                    global.msg[0]= "* (You returned the umbrella.)/%%";
 	                    global.flag[85]= 0;
-	                    if(instance_exists(1149/* obj_umbrellabox */))
+	                    if(instance_exists(obj_umbrellabox ))
 	                        obj_umbrellabox.image_index= 0;
 	                    obj_mainchara.dsprite= 1043;
 	                    obj_mainchara.rsprite= 1045;
@@ -2143,7 +2143,7 @@ function SCR_TEXT(argument0) {
 	                global.msg[1]= "* (Inside the statue^1, a music&  box begins to play...)/%%";
 	                global.flag[85]= 0;
 	                global.flag[86]= 1;
-	                if(instance_exists(1157/* obj_musicstatue */)) {
+	                if(instance_exists(obj_musicstatue )) {
 	                    obj_musicstatue.image_index= 1;
 	                    obj_musicstatue.con= 1;
 	                }
@@ -2188,7 +2188,7 @@ function SCR_TEXT(argument0) {
 	            if(doak == 0) {
 	                noroom= 0;
 	                doak= 1;
-	                script_execute(84/* scr_itemget */, 35);
+	                script_execute(scr_itemget , 35);
 	                if(noroom == 0) global.flag[108]++;
 	            }
 	            if(noroom == 0) global.msg[0]= "* (You got the Astronaut Food.)/%%";
@@ -2282,7 +2282,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] != 1) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (You play the CD.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 1;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* (Spooktunes are dead.)/%%";
@@ -2290,7 +2290,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] == 1) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (The CD stops moving.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 2;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* %%";
@@ -2310,7 +2310,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] != 2) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (You play the CD.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 3;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* %%";
@@ -2318,7 +2318,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] == 2) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (The CD stops moving.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 2;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* %%";
@@ -2338,7 +2338,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] != 3) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (You play the CD.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 4;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* %%";
@@ -2346,7 +2346,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[94] == 3) {
 	            if(global.choice == 0) {
 	                global.msg[0]= "* (The CD stops moving.)/%%";
-	                if(instance_exists(1134/* obj_napstablookdate_music */))
+	                if(instance_exists(obj_napstablookdate_music ))
 	                    obj_napstablookdate_music.con= 2;
 	            }
 	            if(global.choice == 1) global.msg[0]= "* %%";
@@ -2360,7 +2360,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            if(global.flag[93] < 2) {
 	                global.msg[0]= "* (There\\'s a lonely sandwich&  inside.)/%%";
-	                if(instance_exists(1133/* obj_napstablookdate */))
+	                if(instance_exists(obj_napstablookdate ))
 	                    obj_napstablookdate.con= 11;
 	            } else  global.msg[0]= "* (It\\'s empty.)/%%";
 	        }
@@ -2492,7 +2492,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[1]= " ";
 	        } else  {
 	            global.msg[0]= "* (There\\'s no more water left&  in the cooler.)/%%";
-	            if(instance_exists(1295/* obj_undynefall */))
+	            if(instance_exists(obj_undynefall ))
 	                global.msg[0]= "* (Sadistically^1, you\\'ve poured&  out all the water right in&  front of Undyne\\'s eyes.)/%%";
 	        }
 	        break;
@@ -2514,7 +2514,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[0]= "* (You pour the water on&  the ground next to the&  water cooler.)/%%";
 	            // obj_watercooler
 	            with(1298) {
-	                if(instance_exists(1295/* obj_undynefall */))
+	                if(instance_exists(obj_undynefall ))
 	                    global.flag[441]++;
 	                global.flag[353]++;
 	                event_user(1);
@@ -2524,7 +2524,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 729:
 	        global.msg[0]= "* A rousing error./%%";
-	        if(instance_exists(1298/* obj_watercooler */)) {
+	        if(instance_exists(obj_watercooler )) {
 	            if(obj_watercooler.havewater == 1) {
 	                global.msg[0]= "* (Give Undyne the water?)& &         Yes         No \\\\C";
 	                global.msg[1]= " ";
@@ -2743,8 +2743,8 @@ function SCR_TEXT(argument0) {
 	    case 708:
 	        global.msg[0]= " %%";
 	        global.msg[1]= " ";
-	        if(global.choice == 0 && !instance_exists(1169/* obj_paino */))
-	            instance_create(2, 2, 1169/* obj_paino */);
+	        if(global.choice == 0 && !instance_exists(obj_paino ))
+	            instance_create(2, 2, obj_paino );
 	        break;
 	    case 707:
 	        global.msg[0]= "See that heart^1? &That is your SOUL^1,&the very culmination&of your being!/";
@@ -2799,7 +2799,7 @@ function SCR_TEXT(argument0) {
 	        global.msg[0]= "* Later^1, then./%%";
 	        global.msg[1]= " ";
 	        if(global.choice == 0) {
-	            if(!instance_exists(1167/* obj_purpledude */)) obj_purpledude.con= 1;
+	            if(!instance_exists(obj_purpledude )) obj_purpledude.con= 1;
 	            global.msg[0]= "* Hop on!/%%";
 	        }
 	        break;
@@ -2811,7 +2811,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[371] == 0 && doak == 0) {
 	            global.msg[0]= " %%";
 	            if(global.choice == 0) {
-	                sc= instance_create(0, 0, 90/* obj_soundcombo */);
+	                sc= instance_create(0, 0, obj_soundcombo );
 	                with(sc) {
 	                    sound1= 132;
 	                    sound2= 13;
@@ -2819,7 +2819,7 @@ function SCR_TEXT(argument0) {
 	                }
 	                doak= 1;
 	                global.msg[0]= "* (The lasers were deactivated.)/%%";
-	                if(instance_exists(1288/* obj_laserswitch1 */)) {
+	                if(instance_exists(obj_laserswitch1 )) {
 	                    // obj_laserswitch1
 	                    with(1288) event_user(0);
 	                }
@@ -2828,7 +2828,7 @@ function SCR_TEXT(argument0) {
 	        if(global.flag[371] == 1 && doak == 0) {
 	            global.msg[0]= " %%";
 	            if(global.choice == 0) {
-	                sc= instance_create(0, 0, 90/* obj_soundcombo */);
+	                sc= instance_create(0, 0, obj_soundcombo );
 	                with(sc) {
 	                    sound1= 132;
 	                    sound2= 13;
@@ -2836,7 +2836,7 @@ function SCR_TEXT(argument0) {
 	                }
 	                doak= 1;
 	                global.msg[0]= "* (The lasers were reactivated.)/%%";
-	                if(instance_exists(1288/* obj_laserswitch1 */)) {
+	                if(instance_exists(obj_laserswitch1 )) {
 	                    // obj_laserswitch1
 	                    with(1288) event_user(1);
 	                }
@@ -2890,12 +2890,12 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 692:
-	        script_execute(63/* scr_cost */, 30);
+	        script_execute(scr_cost , 30);
 	        if(global.choice == 0) {
 	            if(afford == 1 && doak == 0) {
 	                doak= 1;
-	                if(global.flag[379] != 1) script_execute(84/* scr_itemget */, 38);
-	                if(global.flag[379] == 1) script_execute(84/* scr_itemget */, 39);
+	                if(global.flag[379] != 1) script_execute(scr_itemget , 38);
+	                if(global.flag[379] == 1) script_execute(scr_itemget , 39);
 	                if(noroom == 0) {
 	                    global.gold-= 30;
 	                    global.flag[378]+= 30;
@@ -3042,7 +3042,7 @@ function SCR_TEXT(argument0) {
 	        global.msg[0]= " %%";
 	        if(global.choice == 0 && obj_xoxocontroller1.fvic != 1) {
 	            obj_xoxocontroller1.fvic= 1;
-	            snd_play(132/* snd_switchpull_n */);
+	            snd_play(snd_switchpull_n );
 	        }
 	        break;
 	    case 680:
@@ -3058,7 +3058,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "OKAY^1!&STAND BEHIND ME!/%%";
-	            if(instance_exists(1064/* obj_undynedate_outside */))
+	            if(instance_exists(obj_undynedate_outside ))
 	                obj_undynedate_outside.con= 5;
 	        }
 	        if(global.choice == 1) {
@@ -3077,7 +3077,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "OKAY^1!&STAND BEHIND ME!/%%";
-	            if(instance_exists(1064/* obj_undynedate_outside */))
+	            if(instance_exists(obj_undynedate_outside ))
 	                obj_undynedate_outside.con= 5;
 	        }
 	        if(global.choice == 1) global.msg[1]= "TAKE YOUR TIME!/%%";
@@ -3087,7 +3087,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            scr_papface(0, 0);
 	            global.msg[1]= "OKAY^1!&STAND BEHIND ME!/%%";
-	            if(instance_exists(1064/* obj_undynedate_outside */))
+	            if(instance_exists(obj_undynedate_outside ))
 	                obj_undynedate_outside.con= 5;
 	        }
 	        if(global.choice == 1) global.msg[1]= "TAKE YOUR TIME!/%%";
@@ -3116,7 +3116,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[11]= "\\\\M2* It\\'s the perfect&  revenge!!!/";
 	            global.msg[12]= "\\\\E1* Err.../";
 	            global.msg[13]= "\\\\E9* Why don\\'t you&  have a seat?/%%";
-	            if(instance_exists(1063/* obj_undynedate_inside */))
+	            if(instance_exists(obj_undynedate_inside ))
 	                obj_undynedate_inside.con= 50;
 	        }
 	        if(global.choice == 1) {
@@ -3138,7 +3138,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[5]= "\\\\E0* You\\'re the enemy&  of everyone\\'s hopes&  and dreams!/";
 	            global.msg[6]= "\\\\E1* I WILL NEVER&  BE YOUR FRIEND./";
 	            global.msg[7]= "\\\\E3* Now get out of&  my house!/%%";
-	            if(instance_exists(1063/* obj_undynedate_inside */))
+	            if(instance_exists(obj_undynedate_inside ))
 	                obj_undynedate_inside.con= 40;
 	        }
 	        if(global.choice == 1) {
@@ -3158,7 +3158,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[13]= "\\\\E6* FUHUHUHUHU!!!/";
 	            global.msg[14]= "\\\\E1* Err.../";
 	            global.msg[15]= "\\\\E9* Now^1, why don\\'t&  you have a seat?/%%";
-	            if(instance_exists(1063/* obj_undynedate_inside */))
+	            if(instance_exists(obj_undynedate_inside ))
 	                obj_undynedate_inside.con= 50;
 	        }
 	        break;
@@ -3470,10 +3470,10 @@ function SCR_TEXT(argument0) {
 	        global.msg[1]= " ";
 	        break;
 	    case 612:
-	        script_execute(63/* scr_cost */, 9999);
+	        script_execute(scr_cost , 9999);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 10);
+	            script_execute(scr_itemget , 10);
 	            if(noroom == 0) {
 	                global.gold-= 9999;
 	                global.flag[59]+= 9999;
@@ -3496,10 +3496,10 @@ function SCR_TEXT(argument0) {
 	        global.msg[1]= " ";
 	        break;
 	    case 610:
-	        script_execute(63/* scr_cost */, 9999);
+	        script_execute(scr_cost , 9999);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 7);
+	            script_execute(scr_itemget , 7);
 	            if(noroom == 0) {
 	                global.gold-= 9999;
 	                global.flag[59]+= 9999;
@@ -3604,7 +3604,7 @@ function SCR_TEXT(argument0) {
 	    case 592:
 	        if(global.choice == 0) {
 	            global.msg[0]= "* great^1, thanks for&  treating me./%%";
-	            if(instance_exists(1261/* obj_sans_prefinaldate */))
+	            if(instance_exists(obj_sans_prefinaldate ))
 	                obj_sans_prefinaldate.con= 1;
 	        }
 	        if(global.choice == 1)
@@ -3688,7 +3688,7 @@ function SCR_TEXT(argument0) {
 	            if(room == 70 || room == 125) global.flag[459]= 3;
 	            if(room == 140) global.flag[459]= 2;
 	        }
-	        if(instance_exists(1074/* obj_dogboat_thing */))
+	        if(instance_exists(obj_dogboat_thing ))
 	            obj_dogboat_thing.con= 0.1;
 	        global.msg[0]= "* Then we\\'re off.../%%";
 	        break;
@@ -3705,7 +3705,7 @@ function SCR_TEXT(argument0) {
 	            // obj_mainchara
 	            with(1570) uncan= 1;
 	            global.flag[490]= 1;
-	            if(instance_exists(1557/* obj_amalgam_dogevent */))
+	            if(instance_exists(obj_amalgam_dogevent ))
 	                obj_amalgam_dogevent.con= 50;
 	        }
 	        break;
@@ -3719,7 +3719,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            // obj_mainchara
 	            with(1570) uncan= 1;
-	            if(instance_exists(1545/* obj_bed_watcher */)) obj_bed_watcher.con= 5;
+	            if(instance_exists(obj_bed_watcher )) obj_bed_watcher.con= 5;
 	        }
 	        break;
 	    case 579:
@@ -3738,7 +3738,7 @@ function SCR_TEXT(argument0) {
 	    case 578:
 	        global.msg[0]= " %%";
 	        if(global.choice == 0 && global.flag[484] == 0) {
-	            snd_play(106/* snd_noise */);
+	            snd_play(snd_noise );
 	            global.flag[484]= 1;
 	        }
 	        break;
@@ -3755,7 +3755,7 @@ function SCR_TEXT(argument0) {
 	        if(global.choice == 0) {
 	            // obj_mainchara
 	            with(1570) uncan= 1;
-	            if(instance_exists(1543/* obj_lab_powerswitch */)) {
+	            if(instance_exists(obj_lab_powerswitch )) {
 	                global.flag[491]= 1;
 	                obj_lab_powerswitch.con= 5;
 	            }
@@ -3844,7 +3844,7 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 572:
 	        global.msg[0]= " %%";
-	        if(instance_exists(1684/* obj_asriel_overworldanim */)) {
+	        if(instance_exists(obj_asriel_overworldanim )) {
 	            if(global.choice == 0) obj_asriel_overworldanim.con= 28;
 	            if(global.choice == 1) obj_asriel_overworldanim.con= 50;
 	        }
@@ -4064,9 +4064,9 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 559:
 	        global.msg[0]= " %%";
-	        if(global.choice == 0 && instance_exists(1308/* obj_outsideworld_event */))
+	        if(global.choice == 0 && instance_exists(obj_outsideworld_event ))
 	            obj_outsideworld_event.con= 100;
-	        if(global.choice == 1 && instance_exists(1308/* obj_outsideworld_event */))
+	        if(global.choice == 1 && instance_exists(obj_outsideworld_event ))
 	            obj_outsideworld_event.con= 200;
 	        break;
 	    case 558:
@@ -4077,11 +4077,11 @@ function SCR_TEXT(argument0) {
 	    case 557:
 	        if(global.choice == 0) {
 	            if(doak == 0) {
-	                snd_play(17/* snd_knock */);
+	                snd_play(snd_knock );
 	                doak= 1;
 	            }
 	            global.msg[0]= "* (You slide the letter under&  the door and give it a&  knock.)/%%";
-	            if(instance_exists(1307/* obj_alabdoor_l */)) {
+	            if(instance_exists(obj_alabdoor_l )) {
 	                obj_alabdoor_l.myinteract= 5;
 	                obj_alabdoor_l.con= 2;
 	            }
@@ -4128,10 +4128,10 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 552:
-	        script_execute(63/* scr_cost */, 25);
+	        script_execute(scr_cost , 25);
 	        if(global.choice == 0 && afford == 1 && doak == 0) {
 	            doak= 1;
-	            script_execute(84/* scr_itemget */, 58);
+	            script_execute(scr_itemget , 58);
 	            if(noroom == 0) {
 	                global.gold-= 25;
 	                global.flag[495]++;
@@ -4203,7 +4203,7 @@ function SCR_TEXT(argument0) {
 	    case 548:
 	        if(global.choice == 0) {
 	            global.msg[0]= "* (You told Mettaton there&  was something cool&  behind him.)/%%";
-	            if(instance_exists(1249/* obj_mettboss_event */))
+	            if(instance_exists(obj_mettboss_event ))
 	                obj_mettboss_event.con= 4.5;
 	        }
 	        if(global.choice == 1) {
@@ -4233,7 +4233,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[1]= "\\\\E1* ah./";
 	            global.msg[2]= "\\\\E0* i see./";
 	            global.msg[3]= "\\\\E3* .../%%";
-	            if(instance_exists(1325/* obj_lastsans_trigger */))
+	            if(instance_exists(obj_lastsans_trigger ))
 	                obj_lastsans_trigger.con= 20;
 	        }
 	        if(global.choice == 1) {
@@ -4242,7 +4242,7 @@ function SCR_TEXT(argument0) {
 	            global.msg[2]= "\\\\E0* well^1, that\\'s your&  viewpoint./";
 	            global.msg[3]= "\\\\E2* i won\\'t judge you&  for it./";
 	            global.msg[4]= "\\\\E3* .../%%";
-	            if(instance_exists(1325/* obj_lastsans_trigger */))
+	            if(instance_exists(obj_lastsans_trigger ))
 	                obj_lastsans_trigger.con= 21;
 	        }
 	        break;
@@ -4335,14 +4335,14 @@ function SCR_TEXT(argument0) {
 	        break;
 	    case 528:
 	        // obj_heatsflamesman
-	        with(1483) sprite_index= 1974/* spr_heatsf_remember */;
+	        with(1483) sprite_index= spr_heatsf_remember ;
 	        global.msg[0]= "* Hey^1, hey^1!&* Did you remember my name?/";
 	        global.msg[1]= "* (Did you?)& &         Yes         No\\\\C";
 	        global.msg[2]= " ";
 	        break;
 	    case 527:
 	        // obj_heatsflamesman
-	        with(1483) sprite_index= 1975/* spr_heatsf_shock */;
+	        with(1483) sprite_index= spr_heatsf_shock ;
 	        if(global.choice == 0) {
 	            global.flag[434]= 1;
 	            global.msg[0]= "* Wh-WHAT!^1?&* You REMEMBER!?/";
@@ -4843,7 +4843,7 @@ function SCR_TEXT(argument0) {
 	        }
 	        break;
 	    case 255:
-	        if(instance_exists(293/* obj_moldsmalx */)) {
+	        if(instance_exists(obj_moldsmalx )) {
 	            if(obj_moldsmalx.stage == 0) {
 	                global.msg[0]= "   * Check         * Imitate&   * Flirt";
 	                global.choices[0]= 1;
@@ -4908,7 +4908,7 @@ function SCR_TEXT(argument0) {
 	        global.choices[3]= 1;
 	        global.choices[4]= 0;
 	        global.choices[5]= 0;
-	        if(instance_exists(272/* obj_undyneboss */) && obj_undyneboss.con >= 50) {
+	        if(instance_exists(obj_undyneboss ) && obj_undyneboss.con >= 50) {
 	            global.msg[0]= "   * Check";
 	            global.choices[0]= 1;
 	            global.choices[1]= 0;
@@ -5138,7 +5138,7 @@ function SCR_TEXT(argument0) {
 	        global.choices[3]= 1;
 	        global.choices[4]= 1;
 	        global.choices[5]= 0;
-	        if(instance_exists(554/* obj_memoryhead */) && obj_memoryhead.coherent == 1) {
+	        if(instance_exists(obj_memoryhead ) && obj_memoryhead.coherent == 1) {
 	            global.msg[0]= "   * Check         * Join&   * Refuse";
 	            global.choices[0]= 1;
 	            global.choices[1]= 1;

@@ -5,8 +5,8 @@ function scr_itemshift(argument0, argument1) {
 	    global.item[i]= global.item[i + 1];
 	    i++;
 	}
-	script_execute(75/* scr_itemnameb */);
-	script_execute(82/* scr_itemname */);
+	script_execute(scr_itemnameb );
+	script_execute(scr_itemname );
 
 
 

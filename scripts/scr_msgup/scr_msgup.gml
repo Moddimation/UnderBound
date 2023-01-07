@@ -7,7 +7,7 @@ function scr_msgup() {
 	writingy= round(writingy);
 	myx= writingx;
 	myy= writingy;
-	script_execute(1/* SCR_TEXT */, global.msc);
+	script_execute(SCR_TEXT , global.msc);
 	n= 0;
 	while(global.msg[n] != "%%%") {
 	    mystring[n]= global.msg[n];

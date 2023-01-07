@@ -3,7 +3,7 @@ function scr_regulartext() {
 	global.facechoice= 0;
 	global.faceemotion= 0;
 	global.msc= 0;
-	instance_create(0, 0, 779/* obj_dialoguer */);
+	instance_create(0, 0, obj_dialoguer );
 
 
 

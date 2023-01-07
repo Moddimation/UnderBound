@@ -14,8 +14,8 @@ function scr_weaponeq(argument0, argument1) {
 	if(global.weapon == 52) global.wstrength= 99;
 	if(global.armor == 48) global.wstrength+= 5;
 	if(global.armor == 64) global.wstrength+= 10;
-	script_execute(75/* scr_itemnameb */);
-	script_execute(82/* scr_itemname */);
+	script_execute(scr_itemnameb );
+	script_execute(scr_itemname );
 
 
 

@@ -24,7 +24,7 @@ function scr_binfowrite() {
 	    if(global.km > 40) global.km= 40;
 	    if(global.km > global.hp) global.km= global.hp - 1;
 	    draw_rectangle(255 + global.hp * 1.2, 400, 255 + global.hp * 1.2 - global.km * 1.2, 420, 0);
-	    draw_sprite(686/* spr_krmeter */, 0, 265 + global.maxhp * 1.2, 405);
+	    draw_sprite(spr_krmeter , 0, 265 + global.maxhp * 1.2, 405);
 	    draw_set_color(16777215);
 	    draw_set_font(7);
 	    hpwrite= string(global.hp);
@@ -34,11 +34,11 @@ function scr_binfowrite() {
 	    draw_text(305 + global.maxhp * 1.2, 400, string_hash_to_newline(hpwrite + " / " + string(global.maxhp)));
 	    draw_set_color(16777215);
 	    draw_text(30, 400, string_hash_to_newline(string(global.charname) + "   LV " + string(global.lv)));
-	    if(instance_exists(183/* obj_hpname */)) {
+	    if(instance_exists(obj_hpname )) {
 	        // obj_hpname
 	        with(183) instance_destroy();
 	    }
-	    draw_sprite(15/* spr_hpname */, 0, 220, 400);
+	    draw_sprite(spr_hpname , 0, 220, 400);
 	}
 
 

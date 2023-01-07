@@ -14,11 +14,11 @@ function SCR_THATCH(argument0, argument1, argument2, argument3, argument4, argum
 	while(i <= bulletnumber) {
 	    global.bulletvariable[6]+= argument2;
 	    global.bulletvariable[7]+= argument8 * i;
-	    iii= instance_create(x + i * xdiff, y + i * ydiff, 681/* blt_thatch */);
+	    iii= instance_create(x + i * xdiff, y + i * ydiff, blt_thatch );
 	    with(iii) dmg= 5;
 	    global.bulletvariable[6]-= argument2 * 2;
 	    global.bulletvariable[7]-= argument8 * i * 2;
-	    iii= instance_create(x + i * xdiff, y + i * ydiff, 681/* blt_thatch */);
+	    iii= instance_create(x + i * xdiff, y + i * ydiff, blt_thatch );
 	    with(iii) dmg= 5;
 	    global.bulletvariable[6]= argument6;
 	    global.bulletvariable[7]= argument7;

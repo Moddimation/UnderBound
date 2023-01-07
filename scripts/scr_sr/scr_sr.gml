@@ -1,5 +1,5 @@
 function scr_sr(argument0, argument1, argument2, argument3) {
-	if(instance_exists(264/* obj_greenspeargen */)) {
+	if(instance_exists(obj_greenspeargen )) {
 	    if(argument0 == 4) argument0= floor(random(4));
 	    if(argument1 == 3) argument1= floor(random(2));
 	    if(argument2 == 0 && argument1 != 2) argument2= 1;

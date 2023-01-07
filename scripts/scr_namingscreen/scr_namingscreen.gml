@@ -3,7 +3,7 @@ function scr_namingscreen() {
 	draw_set_font(2);
 	if(naming == 4) {
 	    global.charname= charname;
-	    instance_create(0, 0, 150/* obj_whitefader */);
+	    instance_create(0, 0, obj_whitefader );
 	    caster_free(-3);
 	    alerm= 0;
 	    naming= 5;
@@ -15,7 +15,7 @@ function scr_namingscreen() {
 	    if(q < 120) q++;
 	    draw_text_transformed(140 + random(r * 2) - q / 3, q / 2 + 55 + random(r * 2), string_hash_to_newline(charname), 1 + q / 50, 1 + q / 50, random_ranger(-r * q / 60, r * q / 60));
 	    if(alerm > 179) {
-	        instance_create(0, 0, 148/* obj_persistentfader */);
+	        instance_create(0, 0, obj_persistentfader );
 	        if(truereset > 0) {
 	            ini_open("undertale.ini");
 	            sk= ini_read_real("reset", "s_key", 0);
@@ -145,14 +145,14 @@ function scr_namingscreen() {
 	    }
 	    demonx= "Part of this game\\'s charm is the mystery of how many options or secrets there are. If you are reading this, please don\\'t post this message or this information anywhere. Or doing secrets will become pointless.";
 	    if(l_char == "gaster") game_restart();
-	    if(keyboard_multicheck_pressed(0/* NOKEY */) == 1) {
+	    if(keyboard_multicheck_pressed(0) == 1) {
 	        if(allow == 1 && selected2 == 1 && string_length(charname) > 0)
 	            naming= 4;
 	        if(selected2 == 0) {
 	            if(hasname == 1 && truereset == 0) naming= 3;
 	            else  naming= 1;
 	        }
-	        keyboard_clear(13/* ENTER */);
+	        keyboard_clear(13);
 	    }
 	    if(naming == 2) {
 	        draw_set_color(16777215);
@@ -173,7 +173,7 @@ function scr_namingscreen() {
 	            draw_set_color(16777215);
 	        }
 	        if(allow == 1) {
-	            if(keyboard_check_pressed(39/* RIGHT */) || keyboard_check_pressed(37/* LEFT */)) {
+	            if(keyboard_check_pressed(RIGHT ) || keyboard_check_pressed(37)) {
 	                if(selected2 == 1) selected2= 0;
 	                else  selected2= 1;
 	            }
@@ -223,19 +223,19 @@ function scr_namingscreen() {
 	    draw_set_color(16777215);
 	    if(selected == 125) draw_set_color(65535);
 	    draw_text(220, 200, string_hash_to_newline("Done"));
-	    if(keyboard_check_pressed(39/* RIGHT */)) {
+	    if(keyboard_check_pressed(39)) {
 	        if(selected == 90) selected= 97;
 	        else  {
 	            if(selected < 125) selected++;
 	        }
 	    }
-	    if(keyboard_check_pressed(37/* LEFT */)) {
+	    if(keyboard_check_pressed(37)) {
 	        if(selected == 97) selected= 90;
 	        else  {
 	            if(selected > 65) selected--;
 	        }
 	    }
-	    if(keyboard_check_pressed(40/* DOWN */)) {
+	    if(keyboard_check_pressed(40)) {
 	        if(selected <= 122) {
 	            if(selected >= 86 && selected <= 90)
 	                selected+= 4;
@@ -251,7 +251,7 @@ function scr_namingscreen() {
 	            }
 	        }
 	    }
-	    if(keyboard_check_pressed(38/* UP */)) {
+	    if(keyboard_check_pressed(38)) {
 	        if(selected > 71) {
 	            if(selected <= 122) {
 	                if(selected >= 97 && selected <= 101)
@@ -269,7 +269,7 @@ function scr_namingscreen() {
 	        }
 	    }
 	    bks_f= 0;
-	    if(keyboard_multicheck_pressed(0/* NOKEY */) == 1) {
+	    if(keyboard_multicheck_pressed(0) == 1) {
 	        if(selected > 122) {
 	            if(selected == 123) naming= 3;
 	            if(selected == 124) bks_f= 1;
@@ -277,14 +277,14 @@ function scr_namingscreen() {
 	                naming= 2;
 	                selected2= 0;
 	            }
-	            keyboard_clear(13/* ENTER */);
+	            keyboard_clear(13);
 	        } else  {
 	            if(string_length(charname) == 6)
 	                charname= string_delete(charname, 6, 1);
 	            charname+= chr(selected);
 	        }
 	    }
-	    if(keyboard_multicheck_pressed(1/* ANYKEY */) || bks_f == 1) {
+	    if(keyboard_multicheck_pressed(1) || bks_f == 1) {
 	        s= string_length(charname);
 	        if(s > 0) charname= string_delete(charname, s, 1);
 	        keyboard_key_release(16);
@@ -300,7 +300,7 @@ function scr_namingscreen() {
 	        seconds= round((time / 1800 - minutes) * 60);
 	        if(seconds == 60) seconds= 0;
 	        if(seconds < 10) seconds= "0" + string(seconds);
-	        script_execute(54/* scr_roomname */, roome);
+	        script_execute(scr_roomname , roome);
 	        draw_text(70, 60, string_hash_to_newline(name));
 	        draw_text(140, 60, string_hash_to_newline("LV " + string(love)));
 	        draw_text(210, 60, string_hash_to_newline(string(minutes) + ":" + string(seconds)));
@@ -321,27 +321,27 @@ function scr_namingscreen() {
 	        if(selected3 == 1) draw_set_color(65535);
 	        if(truereset == 0) draw_text(175, 110, string_hash_to_newline("Reset"));
 	        else  draw_text(175, 110, string_hash_to_newline("True Reset"));
-	        if(keyboard_check_pressed(39/* RIGHT */) || keyboard_check_pressed(37/* LEFT */)) {
+	        if(keyboard_check_pressed(RIGHT ) || keyboard_check_pressed(37)) {
 	            if(selected3 == 0) selected3= 1;
 	            else  {
 	                if(selected3 == 1) selected3= 0;
 	            }
-	            keyboard_clear(37/* LEFT */);
-	            keyboard_clear(39/* RIGHT */);
+	            keyboard_clear(37);
+	            keyboard_clear(39);
 	        }
-	        if(keyboard_check_pressed(40/* DOWN */) && js == 1) {
+	        if(keyboard_check_pressed(40) && js == 1) {
 	            if(selected3 == 0 || selected3 == 1) selected3= 2;
-	            keyboard_clear(40/* DOWN */);
+	            keyboard_clear(40);
 	        }
-	        if(keyboard_check_pressed(38/* UP */) && js == 1) {
+	        if(keyboard_check_pressed(38) && js == 1) {
 	            if(selected3 == 2) selected3= 0;
-	            keyboard_clear(40/* DOWN */);
+	            keyboard_clear(40);
 	        }
-	        if(keyboard_multicheck_pressed(0/* NOKEY */) == 1) {
+	        if(keyboard_multicheck_pressed(0) == 1) {
 	            if(selected3 == 0) {
 	                caster_free(-3);
 	                if(!file_exists("file0")) room_goto_next();
-	                else  script_execute(61/* scr_load */);
+	                else  script_execute(scr_load );
 	            }
 	            if(selected3 == 1) {
 	                if(hasname == 0 || string_lower(global.charname) == "frisk" || truereset > 0)
@@ -356,7 +356,7 @@ function scr_namingscreen() {
 	                    r= 0.5;
 	                    q= 0;
 	                }
-	                keyboard_clear(13/* ENTER */);
+	                keyboard_clear(13);
 	            }
 	            if(selected3 == 2) {
 	                caster_free(-3);
@@ -375,21 +375,21 @@ function scr_namingscreen() {
 	        draw_set_color(16777215);
 	        if(selected3 == 0) draw_set_color(65535);
 	        if(obj_time.j_ch > 0) draw_text(35, 160, string_hash_to_newline("Begin Game"));
-	        if(keyboard_check_pressed(39/* RIGHT */) && obj_time.j_ch > 0 && selected3 == 0)
+	        if(keyboard_check_pressed(39) && obj_time.j_ch > 0 && selected3 == 0)
 	            selected3= 1;
 	        if(obj_time.j_ch == 0) selected3= 0;
-	        if(keyboard_check_pressed(37/* LEFT */) && selected3 == 1)
+	        if(keyboard_check_pressed(37) && selected3 == 1)
 	            selected3= 0;
 	        if(obj_time.j_ch > 0) {
 	            draw_set_color(16777215);
 	            if(selected3 == 1) draw_set_color(65535);
 	            draw_text(175, 160, string_hash_to_newline("Joystick Config"));
 	        } else  selected3= 0;
-	        if(keyboard_multicheck_pressed(0/* NOKEY */) == 1 && selected3 == 0) {
+	        if(keyboard_multicheck_pressed(0) == 1 && selected3 == 0) {
 	            naming= 1;
-	            keyboard_clear(13/* ENTER */);
+	            keyboard_clear(13);
 	        }
-	        if(keyboard_multicheck_pressed(0/* NOKEY */) == 1 && selected3 == 1) {
+	        if(keyboard_multicheck_pressed(0) == 1 && selected3 == 1) {
 	            caster_free(-3);
 	            room_goto(288);
 	        }
