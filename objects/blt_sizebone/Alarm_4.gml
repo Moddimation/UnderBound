@@ -33,4 +33,4 @@ blconwd= instance_create(blcon.x + 15, blcon.y + 10, OBJ_WRITER );
 alarm[5]= 1;
 
 
-/*  */
+

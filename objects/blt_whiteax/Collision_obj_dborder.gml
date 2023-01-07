@@ -16,4 +16,4 @@ instance_create(0, 0, obj_shaker );
 if(scr_monstersum() == 1) alarm[1]= 4;
 
 
-/*  */
+

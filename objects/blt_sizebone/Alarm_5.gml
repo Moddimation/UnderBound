@@ -7,4 +7,4 @@ if(!instance_exists(OBJ_WRITER )) {
 if(!instance_exists(OBJ_WRITER )) alarm[5]= 2;
 
 
-/*  */
+

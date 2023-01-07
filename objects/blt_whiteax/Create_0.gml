@@ -25,4 +25,4 @@ blconnum= 0;
 move= 0;
 
 
-/*  */
+

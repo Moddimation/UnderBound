@@ -4,4 +4,4 @@ if(hurted == 0 && instance_exists(obj_movedoge ))
     obj_movedoge.excited= 0;
 
 
-/*  */
+

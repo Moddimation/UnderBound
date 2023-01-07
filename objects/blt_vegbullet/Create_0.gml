@@ -12,4 +12,4 @@ if(x < global.idealborder[0] + 20) x+= 20;
 green= 0;
 
 
-/*  */
+

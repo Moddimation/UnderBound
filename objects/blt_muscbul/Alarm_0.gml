@@ -19,4 +19,4 @@ alarm[0]= flexspeed;
 if(offset == 1) vspeed= -4;
 
 
-/*  */
+

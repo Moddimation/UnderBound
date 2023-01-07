@@ -17,4 +17,4 @@ if(global.invc < 2 && abs(obj_heart.x + 25 - x) < 50 && collision_rectangle(x + 
     event_user(1);
 
 
-/*  */
+

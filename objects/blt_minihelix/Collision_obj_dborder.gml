@@ -6,4 +6,4 @@ y= yprevious;
 if(dink == 3) instance_destroy();
 
 
-/*  */
+

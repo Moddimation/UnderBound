@@ -16,4 +16,4 @@ if(global.hp < 8) dmg= 2;
 if(global.hp < 6) dmg= 1;
 
 
-/*  */
+

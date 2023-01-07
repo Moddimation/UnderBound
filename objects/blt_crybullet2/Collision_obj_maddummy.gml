@@ -8,4 +8,4 @@ if(obj_maddum_drawer.alarm[5] < 2) {
 instance_destroy();
 
 
-/*  */
+

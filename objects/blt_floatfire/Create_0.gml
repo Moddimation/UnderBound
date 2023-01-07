@@ -5,4 +5,4 @@ image_speed= 0.5;
 vspeed= random(8) - 4;
 
 
-/*  */
+

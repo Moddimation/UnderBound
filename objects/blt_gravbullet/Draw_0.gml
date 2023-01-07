@@ -5,4 +5,4 @@ if(green == 1) {
 draw_self_border();
 
 
-/*  */
+

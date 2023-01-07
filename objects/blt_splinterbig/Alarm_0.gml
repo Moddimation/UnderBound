@@ -8,4 +8,4 @@ while(i < 9) {
 instance_destroy();
 
 
-/*  */
+

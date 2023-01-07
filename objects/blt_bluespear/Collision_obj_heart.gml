@@ -11,4 +11,4 @@ if((abs(obj_heart.xprevious - obj_heart.x) > 0.01 || abs(obj_heart.yprevious - o
 }
 
 
-/*  */
+

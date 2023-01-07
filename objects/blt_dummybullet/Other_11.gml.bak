@@ -9,4 +9,4 @@ if(type == 1) {
 if(type == 2) alarm[5]= -1;
 
 
-/*  */
+

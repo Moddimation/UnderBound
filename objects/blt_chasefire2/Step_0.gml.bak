@@ -6,4 +6,4 @@ if(instance_exists(blt_handbullet1 ) && blt_handbullet1.path_position == 1 && go
 if(y > global.idealborder[3] + 4) instance_destroy();
 
 
-/*  */
+
