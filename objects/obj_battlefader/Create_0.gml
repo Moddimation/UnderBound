@@ -1,8 +1,6 @@
 image_xscale= 640;
 image_yscale= 320;
-heart= 743;
-if(instance_exists(obj_fakeheart )) heart= 748;
+heart= obj_heart;
+if(instance_exists(obj_fakeheart)){ heart= obj_fakeheart; }
+show_debug_message(string(obj_fakeheart))
 heart.depth= -1001;
-
-
-/*  */

@@ -11,7 +11,7 @@
   "option_steam_app_id": "0",
   "option_sci_usesci": true,
   "option_author": "",
-  "option_collision_compatibility": true,
+  "option_collision_compatibility": false,
   "option_copy_on_write_enabled": true,
   "option_spine_licence": true,
   "option_template_image": "template_image.png",

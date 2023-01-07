@@ -366,9 +366,9 @@ function scr_namingscreen() {
 	    } else  {
 	        draw_set_color(12632256);
 	        draw_text(85, 20, string_hash_to_newline(" --- Instruction ---"));
-	        draw_text(85, 50, string_hash_to_newline("[Z or ENTER] - Confirm"));
-	        draw_text(85, 68, string_hash_to_newline("[X or SHIFT] - Cancel"));
-	        draw_text(85, 86, string_hash_to_newline("[C or CTRL] - Menu (In-game)"));
+	        draw_text(85, 50, string_hash_to_newline("[Z or 13] - Confirm"));
+	        draw_text(85, 68, string_hash_to_newline("[X or 16] - Cancel"));
+	        draw_text(85, 86, string_hash_to_newline("[C or 17] - Menu (In-game)"));
 	        draw_text(85, 104, string_hash_to_newline("[F4] - Fullscreen"));
 	        draw_text(85, 122, string_hash_to_newline("[Hold ESC] - Quit"));
 	        draw_text(85, 140, string_hash_to_newline("When HP is 0, you lose."));

@@ -1642,7 +1642,7 @@ function SCR_TEXT(argument0) {
 	        global.msg[13]= "CONTINUE FORWARD&UNTIL YOU REACH THE&END OF THE CAVERN./";
 	        global.msg[14]= "\\\\WTHEN..^1. WHEN YOU&REACH THE CAPITAL^1,&CROSS \\\\YTHE BARRIER\\\\W./";
 	        global.msg[15]= "THAT\\'S THE MAGICAL&SEAL TRAPPING US&ALL UNDERGROUND./";
-	        global.msg[16]= "ANYTHING CAN ENTER&THROUGH IT^1, BUT&NOTHING CAN EXIT.../";
+	        global.msg[16]= "ANYTHING CAN 13&THROUGH IT^1, BUT&NOTHING CAN EXIT.../";
 	        global.msg[17]= "... EXCEPT SOMEONE&WITH A POWERFUL&SOUL./";
 	        global.msg[18]= "... LIKE YOU!!!/";
 	        global.msg[19]= "THAT\\'S WHY THE&KING WANTS TO&ACQUIRE A HUMAN./";

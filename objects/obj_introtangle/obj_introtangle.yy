@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_introtangle",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_nothing",
+    "path": "sprites/spr_nothing/spr_nothing.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

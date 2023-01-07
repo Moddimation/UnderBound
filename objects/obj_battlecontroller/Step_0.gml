@@ -224,6 +224,8 @@ if(global.monster[0] == 0 && global.monster[1] == 0 && global.monster[2] == 0 &&
             obj_heart.y= global.idealborder[2] + 28 + global.bmenucoord[4] * 32;
         }
     }
+show_debug_message("BATTLECONTROLLER RUNNING");
+draw_self();
     if(active == 1 && keyboard_multicheck_pressed(16) && global.mnfight == 0 && global.flag[21] == 0) {
         if(instance_number(782) > 0)
             OBJ_WRITER.stringpos= string_length(OBJ_WRITER.originalstring);

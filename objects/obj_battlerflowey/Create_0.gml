@@ -6,6 +6,4 @@ on= 0;
 clap= 0;
 depp= -600;
 instance_create(0, 0, obj_tempblack );
-
-
-/*  */
+draw_self();

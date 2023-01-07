@@ -12,6 +12,4 @@ if(global.flag[15] == 0) {
     caster_pause(global.currentsong);
 }
 tb= instance_create(0, 0, obj_tempblack );
-
-
-/*  */
+draw_self();
